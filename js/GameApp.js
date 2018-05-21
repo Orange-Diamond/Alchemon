@@ -13,6 +13,10 @@ class GameApp {
 
         //template sections to be added later:
         //screen display
+        const screenDisplaySection = dom.getElementById('screen-display-section');
+        const screenComponent = new ScreenDisplay();
+        screenDisplaySection.appendChild(screenComponent.render());
+        
         //text/input display 
 
         return dom;
