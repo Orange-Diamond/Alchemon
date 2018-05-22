@@ -23,12 +23,28 @@ this.docBookData = [
     },
 ];
 
+
+
+this.trainerData = [
+    {
+        id: 'Andrew',
+        src: 'images/cursor-back.png'
+    },
+    {
+        id: 'Zack',
+        src: 'images/cursor-front.png'
+    },
+    {
+        id: 'Michelle',
+        src: 'images/cursor-right.png'
+    },
+];
+
 let buildingData = [
     {
         id: 'gym',
         src: 'images/map-gym.png',
         bgSrc: 'images/lab-interior.jpg',
-
         buttons: this.trainerData
         
     },
@@ -44,20 +60,5 @@ let buildingData = [
         src: 'images/map-home.png',
         bgSrc: 'images/lab-interior.jpg',
 
-    },
-];
-
-this.trainerData = [
-    {
-        id: 'Andrew',
-        src: 'images/cursor-back.png'
-    },
-    {
-        id: 'Zack',
-        src: 'images/cursor-front.png'
-    },
-    {
-        id: 'Michelle',
-        src: 'images/cursor-right.png'
     },
 ];
