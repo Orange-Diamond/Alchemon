@@ -1,7 +1,28 @@
-/* exported */
-/* globals */
+/* exported GameApp */
+/* globals ScreenDisplay */
+'use strict';
 
-// game app template
-////
+const gameAppTemplate = document.getElementById('game-app-template');
 
-console.log('hello');
+class GameApp {
+    constructor() {
+        //initialization logic to be added later
+        //link to user profile
+        //link to alchemon data
+        //link to location data
+    }
+
+    render() {
+        const dom = gameAppTemplate.content;
+
+        //template sections to be added:
+        //screen display section:
+        const screenDisplaySection = dom.getElementById('screen-display-section');
+        const screenComponent = new ScreenDisplay();
+        screenDisplaySection.appendChild(screenComponent.render());
+        
+        //text/input display 
+
+        return dom;
+    }
+}
