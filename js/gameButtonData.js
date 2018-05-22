@@ -27,15 +27,15 @@ let docBookData = [
 let buildingData = [
     {
         id: 'gym',
-        src: 'images/'
+        src: 'images/map-gym.png'
     },
     {
         id: 'lab',
-        src: 'images/'
+        src: 'images/map-lab.png'
     },
     {
         id: 'home',
-        src: 'images/'
+        src: 'images/map-home.png'
     },
 ];
 
