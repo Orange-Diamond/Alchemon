@@ -1,4 +1,6 @@
+
 /*exported ScreenDisplay */
+/* globals Button */
 'use strict';
 const screenAreaTemplate = document.getElementById('screen-area-template');
 class ScreenDisplay {
