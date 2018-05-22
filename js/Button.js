@@ -9,7 +9,7 @@ class Button {
     
     render() {
         const dom = buttonTemplate.content.cloneNode(true);
-        const buttonComponent = dom.querySelector('span');
+        const buttonComponent = dom.querySelector('img');
         buttonComponent.addEventListener('click', () => {
             console.log('clicked');
         });
