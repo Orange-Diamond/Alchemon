@@ -6,7 +6,8 @@ const gameAppTemplate = document.getElementById('game-app-template');
 
 class GameApp {
     constructor() {
-        this.buildingList = buildingData;
+        this.buttonList = buildingData;
+        // this.locationBackground = locationBgData;
 
         //initialization logic to be added later
         //link to user profile
@@ -17,14 +18,17 @@ class GameApp {
     render() {
         const dom = gameAppTemplate.content.cloneNode(true);
 
-        const screenArea = dom.getElementById('screen-area');
-        const screenComponent = new ScreenDisplay(this.buildingList, (buttonClicked) => {
+        this.screenArea = dom.getElementById('screen-area');
+        const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
+            console.log(buttonClicked);
+            this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
+            screenComponent.update(buttonClicked.buttons);
         });
-        
+
         const dialogueArea = dom.getElementById('dialog-area');
         const dialogueComponent = new DialogueDisplay;
         dialogueArea.appendChild(dialogueComponent.render());
-        screenArea.appendChild(screenComponent.render());
+        this.screenArea.appendChild(screenComponent.render());
 
         return dom;
     }

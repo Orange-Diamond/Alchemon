@@ -9,14 +9,23 @@ class ScreenDisplay {
         this.onClick = onClick;
 
     }
+    update(buttonList) {
+        this.buttonList = buttonList;
+        this.screenBackground = document.getElementById('screen-area');
+        while(this.buttonArea.lastElementChild){
+            this.buttonArea.lastElementChild.remove();
+        }
+        for(let i in this.buttonList){
+            this.imageComponent = new Button(this.buttonList[i], this.onClick);
+            this.buttonArea.appendChild(this.imageComponent.render());
+        }
+        
+    }
     
     render() {
         const dom = screenAreaTemplate.content.cloneNode(true);
         this.buttonArea = dom.getElementById('button-area');
-        for(let i in this.buildingList){
-            this.imageComponent = new Button(this.buildingList[i], this.onClick);
-            this.buttonArea.appendChild(this.imageComponent.render());
-        }
+        this.update(this.buildingList);
         return dom;
     }
 
