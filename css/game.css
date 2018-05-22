@@ -10,15 +10,17 @@
 
 
 #game-play-area {
+    position: fixed;
     min-height: 720px;
     background-image: url("/images/gameboy.png");
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed; 
     background-position: center top;
     z-index: 10; 
 }
 
-#button-area {
+#button-template span {
+    background-color:red;
     z-index: 9;
     height: 602px;
     width: 892px;
