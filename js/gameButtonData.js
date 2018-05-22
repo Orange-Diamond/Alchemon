@@ -40,6 +40,13 @@ this.trainerData = [
     },
 ];
 
+this.homeData = [
+    {
+        id: 'Lewis',
+        src: 'images/cursor-left.png'
+    }
+]
+
 let buildingData = [
     {
         id: 'gym',
@@ -59,6 +66,7 @@ let buildingData = [
         id: 'home',
         src: 'images/map-home.png',
         bgSrc: 'images/lab-interior.jpg',
+        buttons: this.homeData
 
     },
 ];
