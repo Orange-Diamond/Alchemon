@@ -1,4 +1,4 @@
-/* exported */
+/* exported introAppTemplate, IntroApp */
 /* globals */
 'use strict';
 
