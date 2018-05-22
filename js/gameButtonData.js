@@ -8,48 +8,56 @@ let pokeballData = [
         src: 'images/'
     },
 ];
-
-let docBookData = [
+this.docBookData = [
     {
         id: 'html-doc',
-        src: 'images/'
+        src: 'images/cursor-front.png'
     },
     {
         id: 'css-doc',
-        src: 'images/'
+        src: 'images/cursor-front.png'
     },
     {
         id: 'js-doc',
-        src: 'images/'
+        src: 'images/cursor-front.png'
     },
 ];
 
 let buildingData = [
     {
         id: 'gym',
-        src: 'images/map-gym.png'
+        src: 'images/map-gym.png',
+        bgSrc: 'images/lab-interior.jpg',
+
+        buttons: this.trainerData
+        
     },
     {
         id: 'lab',
-        src: 'images/map-lab.png'
+        src: 'images/map-lab.png',
+        bgSrc: 'images/lab-interior.jpg',
+        buttons: this.docBookData
+
     },
     {
         id: 'home',
-        src: 'images/map-home.png'
+        src: 'images/map-home.png',
+        bgSrc: 'images/lab-interior.jpg',
+
     },
 ];
 
-let trainerData = [
+this.trainerData = [
     {
-        id: '',
-        src: 'images/'
+        id: 'Andrew',
+        src: 'images/cursor-back.png'
     },
     {
-        id: '',
-        src: 'images/'
+        id: 'Zack',
+        src: 'images/cursor-front.png'
     },
     {
-        id: '',
-        src: 'images/'
+        id: 'Michelle',
+        src: 'images/cursor-right.png'
     },
 ];

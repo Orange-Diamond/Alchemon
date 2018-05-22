@@ -6,20 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/game.css">
-    <title>Document</title>
+    <title>Alchemon Game Play</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div id="game-play-area">
 
-    <a href="index.html">Index.html link</a>
+        </div>
+
+    </div> 
+    <div id="game-nav-bar">
+            <ul>
+                <li><a href="index.html">HOME PAGE</a></li>
+                <li><a href="results.html">RESULTS PAGE</a></li>
+            </ul>
+        </div>   
 
     <!-- // game app template -->
-<template id="game-app-template">
-        <p>game app</p>
-    <div id="screen-area"></div>
-    <!-- dialog area -->
-    <div id="dialog-area"></div>
-</template>
+
+    <template id="game-app-template">
+            <p>game app</p>
+        <div id="screen-area"></div>
+        <!-- dialog area -->
+        <div id="dialog-area"></div>
+    </template>
 
 <!-- screen area template -->
 <template id="screen-area-template">
@@ -44,6 +54,11 @@
     <img>
     </span>
 </template>
+
+
+
+    <script src="js/Locations.js"></script>
+
     <script src="js/gameButtonData.js"></script>
     <script src="js/Button.js"></script>
     <script src="js/Dialogue.js"></script>
