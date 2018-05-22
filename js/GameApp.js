@@ -19,6 +19,14 @@ class GameApp {
 
         const screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buildingList, (buttonClicked) => {
+            console.log('button clicked', buttonClicked);
+
+            if(buttonClicked.src === 'images/map-lab.png') {
+                document.getElementById("screen-area").style.backgroundImage = "url('images/lab-interior.jpg')";
+                // const buttonUpdate = new ScreenDisplay(docBookData[0]);
+                // buttonUpdate.render();
+
+            }
         });
         
         const dialogueArea = dom.getElementById('dialog-area');

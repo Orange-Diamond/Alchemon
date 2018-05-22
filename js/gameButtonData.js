@@ -12,15 +12,15 @@ let pokeballData = [
 let docBookData = [
     {
         id: 'html-doc',
-        src: 'images/'
+        src: 'images/cursor-back.png'
     },
     {
         id: 'css-doc',
-        src: 'images/'
+        src: 'images/cursor-back.png'
     },
     {
         id: 'js-doc',
-        src: 'images/'
+        src: 'images/cursor-back.png'
     },
 ];
 
