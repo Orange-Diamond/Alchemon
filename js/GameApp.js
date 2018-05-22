@@ -1,5 +1,5 @@
 /* exported GameApp */
-/* globals ScreenDisplay DialogueDisplay*/
+/* globals ScreenDisplay  DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -16,7 +16,10 @@ class GameApp {
         const dom = gameAppTemplate.content.cloneNode(true);
 
         const screenArea = dom.getElementById('screen-area');
-        const screenComponent = new ScreenDisplay;
+        const screenComponent = new ScreenDisplay((buttonClicked) => {
+            
+        });
+        
         const dialogueArea = dom.getElementById('dialog-area');
         const dialogueComponent = new DialogueDisplay;
         dialogueArea.appendChild(dialogueComponent.render());
