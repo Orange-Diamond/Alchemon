@@ -10,3 +10,13 @@ class DialogueDisplay {
     }
 
 }
+
+
+
+
+
+// player name input and submit
+    <form id='player-input'>
+        Player Name:<input type="text" name="player"/>
+        <input type="submit" value="Submit">
+    </form>

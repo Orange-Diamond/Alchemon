@@ -49,3 +49,10 @@ function randomize () {
 }
 
 // user constructor function for use input properties
+class Player {
+    constructor(lives, wins, user.input) {
+        this.lives = 3;
+        this.wins = 0;
+        // this.name = user.input;
+    }
+}
