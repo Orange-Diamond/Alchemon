@@ -1,11 +1,13 @@
 /* exported GameApp */
-/* globals ScreenDisplay  DialogueDisplay*/
+/* globals ScreenDisplay  buildingData DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
 
 class GameApp {
     constructor() {
+        this.buildingList = buildingData;
+
         //initialization logic to be added later
         //link to user profile
         //link to alchemon data
@@ -16,8 +18,7 @@ class GameApp {
         const dom = gameAppTemplate.content.cloneNode(true);
 
         const screenArea = dom.getElementById('screen-area');
-        const screenComponent = new ScreenDisplay((buttonClicked) => {
-            
+        const screenComponent = new ScreenDisplay(this.buildingList, (buttonClicked) => {
         });
         
         const dialogueArea = dom.getElementById('dialog-area');
