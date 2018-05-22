@@ -1,8 +1,9 @@
-#screen {
+/* #screen {
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 400px 400px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-}
+} */
 
+/* We will need a new grid set for the actual game screen dimensions of 892x602
