@@ -1,4 +1,4 @@
-/*exported  */
+/*exported Button */
 'use strict';
 const buttonTemplate = document.getElementById('button-template');
 class Button {
