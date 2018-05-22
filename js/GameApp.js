@@ -1,5 +1,5 @@
 /* exported GameApp */
-/* globals ScreenDisplay */
+/* globals ScreenDisplay DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -13,15 +13,14 @@ class GameApp {
     }
 
     render() {
-        const dom = gameAppTemplate.content;
+        const dom = gameAppTemplate.content.cloneNode(true);
 
-        //template sections to be added:
-        //screen display section:
-        const screenDisplaySection = dom.getElementById('screen-display-section');
-        const screenComponent = new ScreenDisplay();
-        screenDisplaySection.appendChild(screenComponent.render());
-        
-        //text/input display 
+        const screenArea = dom.getElementById('screen-area');
+        const screenComponent = new ScreenDisplay;
+        const dialogueArea = dom.getElementById('dialog-area');
+        const dialogueComponent = new DialogueDisplay;
+        dialogueArea.appendChild(dialogueComponent.render());
+        screenArea.appendChild(screenComponent.render());
 
         return dom;
     }
