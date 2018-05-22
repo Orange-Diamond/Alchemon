@@ -33,3 +33,30 @@ class GameApp {
         return dom;
     }
 }
+
+// // player win/lose number for fight scene
+function randomize () {
+
+
+    for(let i = 0; i < 50; i++) {
+        var randomNum = Math.floor(((Math.random()) * 50));
+        const randomPlayerScore = randomNum;
+        if(randomPlayerScore > 25) {
+            // playerWins();
+        } else {
+            // playerLoses();
+        }
+            
+    }
+
+    console.log('randomPlayerScore', randomPlayerScore);
+}
+
+// // user constructor function for use input properties
+// class Player {
+//     constructor(lives, wins, user.input) {
+//         this.lives = 3;
+//         this.wins = 0;
+//         // this.name = user.input;
+//     }
+// }
