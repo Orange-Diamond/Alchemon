@@ -23,12 +23,35 @@ this.docBookData = [
     },
 ];
 
+
+
+this.trainerData = [
+    {
+        id: 'Andrew',
+        src: 'images/cursor-back.png'
+    },
+    {
+        id: 'Zack',
+        src: 'images/cursor-front.png'
+    },
+    {
+        id: 'Michelle',
+        src: 'images/cursor-right.png'
+    },
+];
+
+this.homeData = [
+    {
+        id: 'Lewis',
+        src: 'images/cursor-left.png'
+    }
+]
+
 let buildingData = [
     {
         id: 'gym',
         src: 'images/map-gym.png',
         bgSrc: 'images/lab-interior.jpg',
-
         buttons: this.trainerData
         
     },
@@ -43,21 +66,7 @@ let buildingData = [
         id: 'home',
         src: 'images/map-home.png',
         bgSrc: 'images/lab-interior.jpg',
+        buttons: this.homeData
 
-    },
-];
-
-this.trainerData = [
-    {
-        id: 'Andrew',
-        src: 'images/cursor-back.png'
-    },
-    {
-        id: 'Zack',
-        src: 'images/cursor-front.png'
-    },
-    {
-        id: 'Michelle',
-        src: 'images/cursor-right.png'
     },
 ];

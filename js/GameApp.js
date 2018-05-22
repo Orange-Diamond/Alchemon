@@ -35,7 +35,7 @@ class GameApp {
 }
 
 // // player win/lose number for fight scene
-function randomize () {
+function randomize() {
 
 
     for(let i = 0; i < 50; i++) {
