@@ -2,7 +2,8 @@
 'use strict';
 const buttonTemplate = document.getElementById('button-template');
 class Button {
-    constructor(onClick){
+    constructor(building, onClick){
+        this.building = building; 
         this.onClick = onClick;
 
     }
@@ -10,11 +11,11 @@ class Button {
     render() {
         const dom = buttonTemplate.content.cloneNode(true);
         const buttonComponent = dom.querySelector('img');
+        buttonComponent.src =   this.building.src;
         buttonComponent.addEventListener('click', () => {
-            console.log('clicked');
+            console.log(this.building);
         });
         
         return dom;
     }
-
 }
