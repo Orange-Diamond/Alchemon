@@ -30,7 +30,7 @@ class GameApp {
     }
 }
 
-// player win/lose number for fight scene
+// // player win/lose number for fight scene
 function randomize () {
 
 
@@ -48,11 +48,11 @@ function randomize () {
     console.log('randomPlayerScore', randomPlayerScore);
 }
 
-// user constructor function for use input properties
-class Player {
-    constructor(lives, wins, user.input) {
-        this.lives = 3;
-        this.wins = 0;
-        // this.name = user.input;
-    }
-}
+// // user constructor function for use input properties
+// class Player {
+//     constructor(lives, wins, user.input) {
+//         this.lives = 3;
+//         this.wins = 0;
+//         // this.name = user.input;
+//     }
+// }
