@@ -25,6 +25,7 @@ class GameApp {
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
             if(trainerData.includes(buttonClicked)){
+                gameApp.randomize();
                 console.log('Clicked trainer');
                 alert('I\'m ' + buttonClicked.id);
             }
@@ -50,7 +51,7 @@ class GameApp {
 
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
-        if(randomPlayerScore < 10) {
+        if(randomPlayerScore < 6) {
             this.lives--;
             console.log('loss'+ this.lives );   
         } else {
