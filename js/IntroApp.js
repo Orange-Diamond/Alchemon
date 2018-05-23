@@ -12,11 +12,12 @@ class IntroApp {
     render() {
         const dom = introAppTemplate.content.cloneNode(true);
 
-        const labScreenArea = dom.getElementById('lab-screen-area');
+        this.labScreenArea = dom.getElementById('lab-screen-area');
+        this.labScreenArea.style.backgroundImage = 'url(\'images/lab-interior.jpg\')';
         const labScreenComponent = new LabScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
         });
-        labScreenArea.appendChild(labScreenComponent.render());
+        this.labScreenArea.appendChild(labScreenComponent.render());
 
         const labDialogueArea = dom.getElementById('lab-dialogue-area');
         const labDialogueComponent = new LabDialogueDisplay();
