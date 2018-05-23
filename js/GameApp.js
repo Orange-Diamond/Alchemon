@@ -7,6 +7,9 @@ const gameAppTemplate = document.getElementById('game-app-template');
 class GameApp {
     constructor() {
         this.buttonList = buildingData;
+        this.lives = 3;
+        this.wins = 0;
+        this.playerName = '';
         // this.locationBackground = locationBgData;
 
         //initialization logic to be added later
@@ -22,6 +25,7 @@ class GameApp {
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
             if(trainerData.includes(buttonClicked)){
+                gameApp.randomize();
                 console.log('Clicked trainer');
                 alert('I\'m ' + buttonClicked.id);
             }
@@ -41,29 +45,18 @@ class GameApp {
 
         return dom;
     }
-}
 
-// // player win/lose number for fight scene
-function randomize() {
-    for(let i = 0; i < 50; i++) {
-        var randomNum = Math.floor(((Math.random()) * 50));
+    randomize() {
+
+        var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
-    }
-    if(randomPlayerScore > 25) {
-        // playerWins();
-    } else {
-        // playerLoses();
-    }
+        if(randomPlayerScore < 6) {
+            this.lives--;
+            console.log('loss'+ this.lives );   
+        } else {
+            this.wins++;
+            console.log('win'+ this.wins );
+        }
             
-
-    console.log('randomPlayerScore', randomPlayerScore);
-}
-
-// // user constructor function for use input properties
-class Player {
-    constructor(lives, wins, user.input) {
-        this.lives = 3;
-        this.wins = 0;
-        // this.name = user.input;
     }
 }
