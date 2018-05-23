@@ -5,7 +5,15 @@
 let pokeballData = [
     {
         id: 'pokeball',
-        src: 'images/'
+        src: 'images/pokeball-Demo.png'
+    },
+    {
+        id: 'pokeball',
+        src: 'images/pokeball-Demo.png'
+    },
+    {
+        id: 'pokeball',
+        src: 'images/pokeball-Demo.png'
     },
 ];
 this.docBookData = [
