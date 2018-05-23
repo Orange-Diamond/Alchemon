@@ -7,6 +7,9 @@ const gameAppTemplate = document.getElementById('game-app-template');
 class GameApp {
     constructor() {
         this.buttonList = buildingData;
+        this.lives = 3;
+        this.wins = 0;
+        this.playerName = '';
         // this.locationBackground = locationBgData;
 
         //initialization logic to be added later
@@ -41,32 +44,19 @@ class GameApp {
 
         return dom;
     }
-}
-
-// // player win/lose number for fight scene
-function randomize() {
 
 
-    for(let i = 0; i < 20; i++) {
+    randomize() {
+
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
         if(randomPlayerScore < 10) {
-            // playerLoses();
+            this.lives--;
+            console.log('loss'+ this.lives );   
         } else {
-            // playerWins();
+            this.wins++;
+            console.log('win'+ this.wins );
         }
             
     }
-
-    console.log('randomPlayerScore', randomPlayerScore);
-}
-
-class Battle {
-    constructor(lives, wins) {
-        this.lives = 3;
-        this.wins = 0;
-    }
-
-    
-
 }
