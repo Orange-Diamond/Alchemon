@@ -23,23 +23,23 @@ class GameApp {
 
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
-            console.log(buttonClicked);
+        
+        let dialogue = document.getElementById('dialogue');
+        console.log(buttonClicked);
 
-            if(trainerData.includes(buttonClicked)){
-                gameApp.randomize(this.result);
-                // let result = result;
-                let dialogue = document.getElementById('dialogue');
-                
-                console.log('Clicked trainer');
-                dialogue.textContent ='You battled ' + buttonClicked.id + '! and you ' + this.result;
-            }
-            else if(homeData.includes(buttonClicked)){
-                alert('NO TOUCHING, JUST LOOKING');
-            }
-            else {
-                this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
-                screenComponent.update(buttonClicked.buttons);
-            }
+        if(trainerData.includes(buttonClicked)){
+            const battleResult = gameApp.randomize(this.result);
+     
+            console.log('Clicked trainer');
+            dialogue.textContent ='You battled ' + buttonClicked.id + '! and you ' + battleResult;
+        }
+        else if(homeData.includes(buttonClicked)){
+            dialogue.textContent = 'NO TOUCHING! JUST LOOKING.... OR SNAKS?';
+        }
+        else {
+            this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
+            screenComponent.update(buttonClicked.buttons);
+        }
         });
 
         const dialogueArea = dom.getElementById('dialog-area');
@@ -50,7 +50,7 @@ class GameApp {
         return dom;
     }
 
-    randomize(result) {
+    randomize (result) {
 
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
@@ -59,12 +59,12 @@ class GameApp {
             this.lives--;
             console.log('loss'+ this.lives );
             
-            return result = ' LOST! 😭 ';
+            return result = ' LOST!  ';
         } else {
             this.wins++;
 
             console.log('win'+ this.wins );
-            return result = ' WON! 🤓 ';
+            return result = ' WON!  ';
         }
             
     }
