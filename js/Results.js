@@ -1,18 +1,21 @@
 /* globals rowResults */
 /* exported rowResults */
 
-const resultsColumn = [playerName, alchemonCreature, wins];
-let playerName = 0;
+const resultsColumn = ['playerName', 'alchemonCreature', 'wins'];
+
 
 function playerResults() {
-    for(let i = 0; i < 1; i++)
     
-    const table = document.getElementsById('player');
+    const table = document.getElementById('player');
     
-    tRow = table.createElement('tr'); 
-for(let i in resultsColumn) {
-    
+    let tRow = document.createElement('tr');
+    table.appendChild(tRow);
+    for(let i in resultsColumn) {
+        tRow = document.querySelector('tr');
+        const tData = document.createElement('td');
+        tData.textContent = resultsColumn[i];
+        tRow.appendChild(tData);
+
+    }
 }
-    
-}
-console.log('tRow', tRow);
+playerResults();
