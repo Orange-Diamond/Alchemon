@@ -1,4 +1,4 @@
-/*  */
+/* exported labScreenAreaTemplate, LabScreenDisplay */
 /*  */
 'use strict';
 
