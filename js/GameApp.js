@@ -25,7 +25,7 @@ class GameApp {
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
             if(trainerData.includes(buttonClicked)){
-                gameApp.randomize();
+                gameApp.randomize(result);
                 console.log('Clicked trainer');
                 alert('I\'m ' + buttonClicked.id);
             }
@@ -46,7 +46,7 @@ class GameApp {
         return dom;
     }
 
-    randomize() {
+    randomize(result) {
 
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
