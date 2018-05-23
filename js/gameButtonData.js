@@ -1,20 +1,6 @@
-/*exported pokeballData, docBookData, buildingData, trainerData */
+/*exported docBookData, buildingData, trainerData */
 'use strict';
 
-let pokeballData = [
-    {
-        id: 'pokeball',
-        src: 'images/pokeball-Demo.png'
-    },
-    {
-        id: 'pokeball',
-        src: 'images/pokeball-Demo.png'
-    },
-    {
-        id: 'pokeball',
-        src: 'images/pokeball-Demo.png'
-    }
-];
 this.docBookData = [
     {
         id: 'html-doc',
@@ -29,8 +15,6 @@ this.docBookData = [
         src: 'images/computer.gif'
     },
 ];
-
-
 
 this.trainerData = [
     {
