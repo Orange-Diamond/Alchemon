@@ -21,8 +21,13 @@ class GameApp {
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
-            this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
-            screenComponent.update(buttonClicked.buttons);
+            if(trainerData.includes(buttonClicked)){
+                console.log('Clicked trainer')
+            }
+            else {
+                this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
+                screenComponent.update(buttonClicked.buttons);
+            }
         });
 
         const dialogueArea = dom.getElementById('dialog-area');
