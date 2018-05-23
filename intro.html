@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/game.css">
+    <title>Alchemon Lab Intro</title>
+</head>
+<body>
+    <div id="root">
+        <div id="lab-intro-area">
+        </div>
+    </div> 
+
+    <div id="game-nav-bar">
+        <ul>
+            <li><a href="index.html">HOME PAGE</a></li>
+            <li><a href="results.html">RESULTS PAGE</a></li>
+        </ul>
+    </div>   
+
+    <!-- lab app template -->
+    <template id="lab-app-template">
+            <p>lab app</p>
+        <div id="lab-screen-area"></div>
+        <!-- dialog area -->
+        <div id="lab-dialog-area"></div>
+    </template>
+
+    <!-- lab screen area template -->
+    <template id="lab-screen-area-template">
+            <p>screen area</p>
+        <div id="button-area"></div>
+    </template>
+
+     <!-- individual button template -->
+     <template id="button-template">
+        <span>
+            <span>button template</span>
+        <img>
+        </span>
+    </template>
+
+    <!-- lab screen dialogue template -->
+    <template id="lab-dialogue-area-template">
+        // player name input and submit
+        <form id='player-input'><br>
+            Player Name:<input type="text" name="player"/><br>
+            <input type="button" onclick="playerName()" value="Submit">
+        </form>
+            <p>dialogue area</p>
+    </template> 
+
+    <script src="js/gameButtonData.js"></script>
+    <script src="js/Button.js"></script>
+    <script src="js/Dialogue.js"></script>
+    <script src="js/Screen.js"></script>
+    <script src="js/IntroApp.js"></script>        
+    <script src="js/introMain.js"></script>        
+</body>
+</html>

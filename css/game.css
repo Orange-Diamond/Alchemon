@@ -6,6 +6,12 @@
     grid-row-gap: 20px;
 } */
 
+
+/* We will need a new grid set for the actual game screen dimensions of 892x602 */ 
+
+h1 {
+    color: blue;
+
 /* We will need a new grid set for the actual game screen dimensions of 892x602 */
 
 
@@ -44,4 +50,5 @@
     display: inline-block; 
     font-family: Arial, Helvetica, sans-serif;
     color: #39499B;
+
 }

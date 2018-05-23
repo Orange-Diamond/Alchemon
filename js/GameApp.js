@@ -1,5 +1,5 @@
 /* exported GameApp */
-/* globals ScreenDisplay  buildingData DialogueDisplay*/
+/* globals ScreenDisplay homeData trainerData buildingData DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -21,8 +21,17 @@ class GameApp {
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
-            this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
-            screenComponent.update(buttonClicked.buttons);
+            if(trainerData.includes(buttonClicked)){
+                console.log('Clicked trainer');
+                alert('I\'m ' + buttonClicked.id);
+            }
+            else if(homeData.includes(buttonClicked)){
+                alert('NO TOUCHING, JUST LOOKING');
+            }
+            else {
+                this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
+                screenComponent.update(buttonClicked.buttons);
+            }
         });
 
         const dialogueArea = dom.getElementById('dialog-area');
@@ -35,7 +44,7 @@ class GameApp {
 }
 
 // // player win/lose number for fight scene
-function randomize () {
+function randomize() {
 
 
     for(let i = 0; i < 50; i++) {
