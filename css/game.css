@@ -6,19 +6,21 @@
     grid-row-gap: 20px;
 } */
 
-
+/* Pixel Font to use for game score display etc... 
+/* font-family: 'Press Start 2P', cursive; */
 /* We will need a new grid set for the actual game screen dimensions of 892x602 */ 
-
 h1 {
     color: blue;
 }
-
+img{
+    height: 175px;
+}
 /* We will need a new grid set for the actual game screen dimensions of 892x602 */
-* {
+/* * {
     border-style: solid;
     border-width: 1px;
     border-color: red;
-}
+} */
 #screen-area {
     background-image: url('/images/main-map-bg.jpg');
     background-repeat: no-repeat;
@@ -32,7 +34,7 @@ h1 {
     
 }
 span {
-margin: 15px
+margin: 20px
 }
 #screen-area:hover{
      cursor:url('/images/cursor-back.png'), auto;
@@ -59,6 +61,9 @@ margin: 15px
     align-items: center;
     justify-content: center
     
+}
+#button-area{
+    width: 600px;
 }
 #button-template span {
     background-color:red;
