@@ -1,0 +1,18 @@
+/* #alchemon {
+    background: yellow;
+    height: 0;
+    overflow: hidden;
+    transition: height 300ms linear;
+}
+
+img {
+    cursor: pointer;
+}
+
+#pokeball {
+    display: none;
+}
+
+#alchemon:active + #pokeball {
+    height: 40px;
+} */
