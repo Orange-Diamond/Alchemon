@@ -1,7 +1,6 @@
 /*exported pokeballData, docBookData, buildingData, trainerData */
 'use strict';
 
-
 let pokeballData = [
     {
         id: 'pokeball',
@@ -14,7 +13,7 @@ let pokeballData = [
     {
         id: 'pokeball',
         src: 'images/pokeball-Demo.png'
-    },
+    }
 ];
 this.docBookData = [
     {
