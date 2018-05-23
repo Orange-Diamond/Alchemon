@@ -28,24 +28,24 @@ this.docBookData = [
 this.trainerData = [
     {
         id: 'Andrew',
-        src: 'images/cursor-back.png'
+        src: 'images/trainer-andrew.png',
     },
     {
         id: 'Zack',
-        src: 'images/cursor-front.png'
+        src: 'images/trainerZach.png'
     },
     {
         id: 'Michelle',
-        src: 'images/cursor-right.png'
+        src: 'images/trainerMichelle.png'
     },
 ];
 
 this.homeData = [
     {
         id: 'Lewis',
-        src: 'images/cursor-left.png'
+        src: 'images/cursor-left.png',
     }
-]
+];
 
 let buildingData = [
     {
