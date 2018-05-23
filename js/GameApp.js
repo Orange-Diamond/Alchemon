@@ -46,7 +46,6 @@ class GameApp {
         return dom;
     }
 
-
     randomize() {
 
         var randomNum = Math.floor(((Math.random()) * 20));
