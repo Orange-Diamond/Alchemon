@@ -11,11 +11,28 @@
 
 h1 {
     color: blue;
+}
 
 /* We will need a new grid set for the actual game screen dimensions of 892x602 */
+* {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+#screen-area {
+    background-image: url('/images/main-map-bg.jpg');
+    background-repeat: no-repeat;
+    height: 602px;
+    width: 892px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
 
-
-#game-play-area {
+}
+/* #game-play-area {
+    display: flex;
+    justify-content: center;
     position: fixed;
     min-height: 720px;
     background-image: url("/images/gameboy.png");
@@ -23,8 +40,15 @@ h1 {
     background-attachment: fixed; 
     background-position: center top;
     z-index: 10; 
+    align-items: center;
+} */
+#root {
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/gameboy.png');
+    background-repeat: no-repeat;
+    
 }
-
 #button-template span {
     background-color:red;
     z-index: 9;
