@@ -1,5 +1,6 @@
 /*exported LabButton */
 'use strict';
+
 const labButtonTemplate = document.getElementById('lab-button-template');
 
 class LabButton {
