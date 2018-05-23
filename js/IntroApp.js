@@ -1,12 +1,11 @@
 /* exported introAppTemplate, IntroApp */
-/* globals pokeballData, LabScreenDisplay, LabDialogueDisplay */
+/* globals LabScreenDisplay, LabDialogueDisplay */
 'use strict';
 
 const introAppTemplate = document.getElementById('intro-app-template');
 
 class IntroApp {
     constructor() {
-        this.buttonList = pokeballData;
     }
 
     render() {
