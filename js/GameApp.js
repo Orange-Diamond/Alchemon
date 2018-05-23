@@ -34,7 +34,7 @@ class GameApp {
             dialogue.textContent ='You battled ' + buttonClicked.id + '! and you ' + battleResult;
         }
         else if(homeData.includes(buttonClicked)){
-            dialogue.textContent = 'NO TOUCHING! JUST LOOKING.... OR SNAKS?';
+            dialogue.textContent = 'NO TOUCHING! JUST LOOKING.... UNLESS YOU HAS SNAKS?';
         }
         else {
             this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
