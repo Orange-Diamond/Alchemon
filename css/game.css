@@ -6,12 +6,9 @@
     grid-row-gap: 20px;
 } */
 
+/* Pixel Font to use for game score display etc... 
+/* font-family: 'Press Start 2P', cursive; */
 
-/* We will need a new grid set for the actual game screen dimensions of 892x602 */ 
-
-h1 {
-    color: blue;
-}
 
 /* We will need a new grid set for the actual game screen dimensions of 892x602 */
 * {

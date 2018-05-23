@@ -47,13 +47,13 @@ class GameApp {
 function randomize() {
 
 
-    for(let i = 0; i < 50; i++) {
-        var randomNum = Math.floor(((Math.random()) * 50));
+    for(let i = 0; i < 20; i++) {
+        var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
-        if(randomPlayerScore > 25) {
-            // playerWins();
-        } else {
+        if(randomPlayerScore < 10) {
             // playerLoses();
+        } else {
+            // playerWins();
         }
             
     }
@@ -61,11 +61,12 @@ function randomize() {
     console.log('randomPlayerScore', randomPlayerScore);
 }
 
-// // user constructor function for use input properties
-// class Player {
-//     constructor(lives, wins, user.input) {
-//         this.lives = 3;
-//         this.wins = 0;
-//         // this.name = user.input;
-//     }
-// }
+class Battle {
+    constructor(lives, wins) {
+        this.lives = 3;
+        this.wins = 0;
+    }
+
+    
+
+}
