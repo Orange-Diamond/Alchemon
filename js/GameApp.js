@@ -1,5 +1,5 @@
-/* exported GameApp */
-/* globals ScreenDisplay homeData trainerData buildingData DialogueDisplay*/
+/* exported randomize  GameApp */
+/* globals ScreenDisplay randomPlayerScore homeData trainerData buildingData DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -29,7 +29,7 @@ class GameApp {
                 alert('NO TOUCHING, JUST LOOKING');
             }
             else {
-                this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
+                this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
                 screenComponent.update(buttonClicked.buttons);
             }
         });

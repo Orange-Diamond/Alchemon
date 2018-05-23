@@ -9,8 +9,8 @@
     <title>Alchemon Game Play</title>
 </head>
 <body>
+    <div id="game-play-area">
     <div id="root">
-        <div id="game-play-area">
 
         </div>
 
@@ -26,7 +26,8 @@
 
     <template id="game-app-template">
             <p>game app</p>
-        <div id="screen-area"></div>
+        <div id="screen-area">
+        </div>
         <!-- dialog area -->
         <div id="dialog-area"></div>
     </template>
@@ -52,15 +53,14 @@
 <!-- individual button template -->
 <template id="button-template">
     <span>
-        <span>button template</span>
-    <img>
+        <span><img></span>
+    
     </span>
 </template>
 
 
 
     <script src="js/Locations.js"></script>
-
     <script src="js/gameButtonData.js"></script>
     <script src="js/Button.js"></script>
     <script src="js/Dialogue.js"></script>
