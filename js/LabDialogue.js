@@ -1,7 +1,7 @@
 /*exported LabDialogueDisplay */
 'use strict';
 
-const labDialogueDisplayTemplate = document.getElementById('lab-dialog-area-template');
+const labDialogueDisplayTemplate = document.getElementById('lab-dialogue-area-template');
 
 class LabDialogueDisplay {
     

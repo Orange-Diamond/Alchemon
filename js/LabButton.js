@@ -1,4 +1,4 @@
-/*exported LabButton */
+/* exported LabButton */
 'use strict';
 
 const labButtonTemplate = document.getElementById('lab-button-template');
@@ -7,7 +7,6 @@ class LabButton {
     constructor(button, onClick){
         this.button = button;
         this.onClick = onClick;
-
     }
     
     render() {

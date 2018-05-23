@@ -1,5 +1,5 @@
 /* exported labScreenAreaTemplate, LabScreenDisplay */
-/*  */
+/* LabButton */
 'use strict';
 
 const labScreenAreaTemplate = document.getElementById('lab-screen-area-template');

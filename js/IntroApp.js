@@ -12,13 +12,15 @@ class IntroApp {
     render() {
         const dom = introAppTemplate.content.cloneNode(true);
 
-        this.labScreenArea = dom.getElementById('lab-screen-area');
-        const labScreenComponent = new LabScreenDisplay();
+        const labScreenArea = dom.getElementById('lab-screen-area');
+        const labScreenComponent = new LabScreenDisplay(this.buttonList, (buttonClicked) => {
+            console.log(buttonClicked);
+        });
+        labScreenArea.appendChild(labScreenComponent.render());
 
-        const labDialogueArea = dom.getElementById('lab-dialog-area');
-        const labDialogueComponent = new LabDialogueDisplay;
+        const labDialogueArea = dom.getElementById('lab-dialogue-area');
+        const labDialogueComponent = new LabDialogueDisplay();
         labDialogueArea.appendChild(labDialogueComponent.render());
-        this.labScreenArea.appendChild(labScreenComponent.render());
 
         return dom;
     }
