@@ -10,14 +10,23 @@ class LabScreenDisplay {
         this.onClick = onClick;
     }
 
+    transform(pokeball) {
+        this.pokeball = pokeball;
+
+        while(this.buttonArea.lastElementChild) {
+            this.buttonArea.lastElementChild.remove();
+        }
+        for(let i in this.buttonList) {
+            this.imageComponent = new LabButton(this.buttonList[i], this.onClick);
+            this.buttonArea.appendChild(this.imageComponent.render());
+        }
+    }
+
 
     render() {
         const dom = labScreenAreaTemplate.content.cloneNode(true);
         this.buttonArea = dom.getElementById('lab-button-area');
-        for(let i in this.buttonList){
-            this.imageComponent = new LabButton(this.buttonList[i], this.onClick);
-            this.buttonArea.appendChild(this.imageComponent.render());
-        }
+        this.transform(this.buttonList);
         return dom;
     }
 
