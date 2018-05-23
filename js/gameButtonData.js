@@ -43,7 +43,7 @@ this.trainerData = [
 this.homeData = [
     {
         id: 'Lewis',
-        src: 'images/cursor-left.png',
+        src: 'images/lewis.gif',
     }
 ];
 

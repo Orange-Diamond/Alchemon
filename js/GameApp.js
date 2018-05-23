@@ -1,5 +1,5 @@
 /* exported GameApp */
-/* globals ScreenDisplay  buildingData DialogueDisplay*/
+/* globals ScreenDisplay homeData trainerData buildingData DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -22,7 +22,11 @@ class GameApp {
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
             if(trainerData.includes(buttonClicked)){
-                console.log('Clicked trainer')
+                console.log('Clicked trainer');
+                alert('I\'m ' + buttonClicked.id);
+            }
+            else if(homeData.includes(buttonClicked)){
+                alert('NO TOUCHING, JUST LOOKING');
             }
             else {
                 this.screenArea.style.backgroundImage = "url('" + buttonClicked.bgSrc + "')";
