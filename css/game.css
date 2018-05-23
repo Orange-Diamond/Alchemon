@@ -6,8 +6,49 @@
     grid-row-gap: 20px;
 } */
 
+
 /* We will need a new grid set for the actual game screen dimensions of 892x602 */ 
 
 h1 {
     color: blue;
+
+/* We will need a new grid set for the actual game screen dimensions of 892x602 */
+
+
+#game-play-area {
+    position: fixed;
+    min-height: 720px;
+    background-image: url("/images/gameboy.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center top;
+    z-index: 10; 
+}
+
+#button-template span {
+    background-color:red;
+    z-index: 9;
+    height: 602px;
+    width: 892px;
+}
+
+#screen-area {
+    z-index: 8;
+}
+
+#dialog-area {
+    z-index: 11;
+}
+
+#game-nav-bar {
+    min-height: 30px;
+    background: #EFEB3E;
+}
+
+#game-nav-bar li {
+    text-decoration: none;
+    display: inline-block; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #39499B;
+
 }

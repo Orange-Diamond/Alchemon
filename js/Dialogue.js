@@ -6,6 +6,10 @@ class DialogueDisplay {
     render() {
         const dom = dialogueDisplayTemplate.content;
 
+        function playerName() {
+            document.getElementById().submit();
+        }
+
         return dom;
     }
 
