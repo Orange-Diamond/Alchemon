@@ -11,15 +11,15 @@ let pokeballData = [
 this.docBookData = [
     {
         id: 'html-doc',
-        src: 'images/cursor-front.png'
+        src: 'images/computer.gif'
     },
     {
         id: 'css-doc',
-        src: 'images/cursor-front.png'
+        src: 'images/computer.gif'
     },
     {
         id: 'js-doc',
-        src: 'images/cursor-front.png'
+        src: 'images/computer.gif'
     },
 ];
 
@@ -28,16 +28,16 @@ this.docBookData = [
 this.trainerData = [
     {
         id: 'Andrew',
-        src: 'images/trainer-andrew.png',
-    },
-    {
-        id: 'Zack',
-        src: 'images/trainerZach.png'
+        src: 'images/andrew-trainer.gif',
     },
     {
         id: 'Michelle',
-        src: 'images/trainerMichelle.png'
+        src: 'images/michelle-trainer.gif'
     },
+    {
+        id: 'Zack',
+        src: 'images/zack-trainer.gif'
+    }
 ];
 
 this.homeData = [
@@ -51,7 +51,7 @@ let buildingData = [
     {
         id: 'gym',
         src: 'images/map-gym.png',
-        bgSrc: 'images/lab-interior.jpg',
+        bgSrc: 'images/gym-interior.png',
         buttons: this.trainerData
         
     },
