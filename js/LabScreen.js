@@ -1,5 +1,5 @@
 /* exported labScreenAreaTemplate, LabScreenDisplay */
-/* globals LabButton */
+/* globals  */
 'use strict';
 
 const labScreenAreaTemplate = document.getElementById('lab-screen-area-template');
@@ -14,10 +14,8 @@ class LabScreenDisplay {
         const dom = labScreenAreaTemplate.content.cloneNode(true);
         this.buttonArea = dom.getElementById('lab-button-area');
         
-        
         return dom;
     }
-
 }
 
 

@@ -11,3 +11,14 @@ label > input + img {
 label > input:checked + img {
     border: 2px solid #f00;
 }
+
+#lab-screen-area {
+    background-image: url('/images/lab-interior.jpg');
+    background-repeat: no-repeat;
+    height: 602px;
+    width: 900px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 8px;
+}
