@@ -10,22 +10,15 @@ class GameApp {
         this.lives = 3;
         this.wins = 0;
         this.playerName = '';
-        // this.locationBackground = locationBgData;
-
-        //initialization logic to be added later
-        //link to user profile
-        //link to alchemon data
-        //link to location data
     }
-
+    
     render() {
         const dom = gameAppTemplate.content.cloneNode(true);
-
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
             if(trainerData.includes(buttonClicked)){
-                gameApp.randomize();
+                this.gameApp.randomize();
                 console.log('Clicked trainer');
                 alert('I\'m ' + buttonClicked.id);
             }
@@ -52,11 +45,22 @@ class GameApp {
         const randomPlayerScore = randomNum;
         if(randomPlayerScore < 6) {
             this.lives--;
-            console.log('loss'+ this.lives );   
+            console.log('loss' + this.lives);
         } else {
             this.wins++;
-            console.log('win'+ this.wins );
+            console.log('win' + this.wins);
         }
             
     }
+
 }
+
+
+function mapRefresh(){
+    const dom = gameAppTemplate.content.cloneNode(true);
+    const screenArea = dom.getElementById('screen-area');
+    console.log(screenArea.backgroundImage);
+    screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
+    
+    console.log('clicked');
+} 
