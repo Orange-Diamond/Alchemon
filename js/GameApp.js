@@ -24,10 +24,14 @@ class GameApp {
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             console.log(buttonClicked);
+
             if(trainerData.includes(buttonClicked)){
-                gameApp.randomize(result);
+                gameApp.randomize(this.result);
+                // let result = result;
+                let dialogue = document.getElementById('dialogue');
+                
                 console.log('Clicked trainer');
-                alert('I\'m ' + buttonClicked.id);
+                dialogue.textContent ='You battled ' + buttonClicked.id + '! and you ' + this.result;
             }
             else if(homeData.includes(buttonClicked)){
                 alert('NO TOUCHING, JUST LOOKING');
@@ -50,12 +54,17 @@ class GameApp {
 
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
+        this.result = result;
         if(randomPlayerScore < 6) {
             this.lives--;
-            console.log('loss'+ this.lives );   
+            console.log('loss'+ this.lives );
+            
+            return result = ' LOST! 😭 ';
         } else {
             this.wins++;
+
             console.log('win'+ this.wins );
+            return result = ' WON! 🤓 ';
         }
             
     }

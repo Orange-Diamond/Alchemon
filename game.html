@@ -11,11 +11,13 @@
 </head>
 <body>
     <div id="game-play-area">
-    <div id="root">
+    
+        <div id="root">
 
         </div>
 
     </div> 
+    
     <div id="game-nav-bar">
             <ul>
                 <li><a href="index.html">HOME PAGE</a></li>
@@ -33,31 +35,24 @@
         <div id="dialog-area"></div>
     </template>
 
-<!-- screen area template -->
-<template id="screen-area-template">
-        <p>screen area</p>
-    <div id="button-area"></div>
-</template>
+    <!-- screen area template -->
+    <template id="screen-area-template">
+            <p>screen area</p>
+        <div id="button-area"></div>
+    </template>
 
-<!-- screen dialog template -->
-<template id="dialog-area-template">
+    <!-- screen dialog template -->
+    <template id="dialog-area-template">
+            <p id="dialogue">HEYYYY text</p>
+    </template> 
 
-    <!-- // player name input and submit -->
-    <form id='player-input'><br>
-        Player Name:<input type="text" name="player"/><br>
-        <input type="button" onclick="playerName()" value="Submit">
-    </form>
-
-        <p>dialog area</p>
-</template> 
-
-<!-- individual button template -->
-<template id="button-template">
-    <span>
-        <span><img></span>
-    
-    </span>
-</template>
+    <!-- individual button template -->
+    <template id="button-template">
+        <span>
+            <span><img></span>
+        
+        </span>
+    </template>
 
 
 
