@@ -76,4 +76,12 @@ let buildingData = [
         buttons: this.homeData
 
     },
+    
 ];
+
+// this.loseData = [{
+//     id: 'lose',
+//     src: '',
+//     bgSrc: 'images/loser.jpg',
+//     buttons: this.loseData
+// }];

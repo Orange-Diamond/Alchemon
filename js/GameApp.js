@@ -23,7 +23,8 @@ class GameApp {
 
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
-        
+        // define loss criteria then do = new ScreenDisplay()
+
         let dialogue = document.getElementById('dialogue');
         console.log(buttonClicked);
 
@@ -32,6 +33,11 @@ class GameApp {
      
             console.log('Clicked trainer');
             dialogue.textContent ='You battled ' + buttonClicked.id + '! and you ' + battleResult;
+            if(this.lives === 0){
+                this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
+                screenComponent.update(buttonClicked.buttons);
+                
+            }
         }
         else if(homeData.includes(buttonClicked)){
             dialogue.textContent = 'NO TOUCHING! JUST LOOKING.... UNLESS YOU HAS SNAKS?';
