@@ -11,12 +11,6 @@
     <title>Alchemon Lab Intro</title>
 </head>
 <body>
-    <!-- music is on autoplay - un-comment when ready to deploy -->
-    <!-- <audio id="lab-music" autoplay>
-        <source src="audio/alchemon-lab.mp3" type="audio/mpeg">
-        Your browser does not support the audio element. 
-    </audio> -->
-
     <div id="root">
         <div id="lab-intro-area">
         </div>
@@ -25,21 +19,17 @@
     <div id="game-nav-bar">
         <ul>
             <li><a href="index.html">HOME PAGE</a></li>
-            <li><a href="game.html">GAME PAGE</a></li> <!-- placeholder to test functionality -->
+            <li><a href="game.html">GAME PAGE</a></li>
             <li><a href="results.html">RESULTS PAGE</a></li>
         </ul>
     </div>   
 
-    <!-- intro app template -->
     <template id="intro-app-template">
-        <!-- <p>lab app</p> -->
         <div id="lab-screen-area"></div>
         <div id="lab-dialogue-area"></div>
     </template>
 
-    <!-- lab screen area template -->
     <template id="lab-screen-area-template">
-            <!-- <p>lab screen area</p> -->
             <div id="lab-button-area">
                 <form id="choose-alchemon">
                     <label>
@@ -57,27 +47,15 @@
                 </form>
             </div>
     </template>
-
-     <!-- individual button template -->
-     <!-- <template id="lab-button-template">
-        <span>
-            <span>lab button template</span>
-        <img>
-        </span>
-    </template> -->
-
-    <!-- lab screen dialogue template -->
     <template id="lab-dialogue-area-template">
         <p>dialogue area</p>
-        <form id='player-input'><br>
+        <form id="player-input"><br>
             Player Name:<input type="text" name="player"/><br>
             <input type="button" onclick="playerName()" value="Submit">
         </form>
     </template> 
-
     <script src="js/gameButtonData.js"></script>
     <script src="js/LabButton.js"></script>
-    <script src="js/LabDialogue.js"></script>
     <script src="js/LabScreen.js"></script>
     <script src="js/IntroApp.js"></script>        
     <script src="js/introMain.js"></script>        
