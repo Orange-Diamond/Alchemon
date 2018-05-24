@@ -1,5 +1,5 @@
 /* exported randomize  GameApp */
-/* globals ScreenDisplay randomPlayerScore homeData trainerData buildingData DialogueDisplay*/
+/* globals ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -57,10 +57,11 @@ class GameApp {
 
 
 function mapRefresh(){
-    const dom = gameAppTemplate.content.cloneNode(true);
-    const screenArea = dom.getElementById('screen-area');
-    console.log(screenArea.backgroundImage);
-    screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
+    location.reload();
+    // const dom = gameAppTemplate.content.cloneNode(true);
+    // const screenArea = dom.getElementById('screen-area');
+    // console.log(screenArea.backgroundImage);
+    // screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
     
-    console.log('clicked');
-} 
+    // console.log('clicked');
+}
