@@ -1,5 +1,5 @@
 /* exported randomize  GameApp */
-/* globals ScreenDisplay randomPlayerScore homeData trainerData buildingData DialogueDisplay*/
+/* globals ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay*/
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -10,17 +10,10 @@ class GameApp {
         this.lives = 3;
         this.wins = 0;
         this.playerName = '';
-        // this.locationBackground = locationBgData;
-
-        //initialization logic to be added later
-        //link to user profile
-        //link to alchemon data
-        //link to location data
     }
-
+    
     render() {
         const dom = gameAppTemplate.content.cloneNode(true);
-
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
         // define loss criteria then do = new ScreenDisplay()
@@ -35,6 +28,7 @@ class GameApp {
             dialogue.textContent ='You battled ' + buttonClicked.id + '! and you ' + battleResult;
             if(this.lives === 0){
                 this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
+
                 screenComponent.update(buttonClicked.buttons);
                 
             }
@@ -71,7 +65,20 @@ class GameApp {
 
             console.log('win'+ this.wins );
             return result = ' WON!  ';
+
         }
             
     }
+
+}
+
+
+function mapRefresh(){
+    location.reload();
+    // const dom = gameAppTemplate.content.cloneNode(true);
+    // const screenArea = dom.getElementById('screen-area');
+    // console.log(screenArea.backgroundImage);
+    // screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
+    
+    // console.log('clicked');
 }
