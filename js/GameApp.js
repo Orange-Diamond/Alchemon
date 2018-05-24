@@ -1,5 +1,5 @@
 /* exported  randomize  GameApp */
-/* globals userData mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+/* globals userData sound mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -37,6 +37,7 @@ class GameApp {
             else {
                 this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
                 screenComponent.update(buttonClicked.buttons);
+                this.playMusic(buttonClicked.mp3);
             }
         });
 
@@ -62,6 +63,12 @@ class GameApp {
             console.log('win #' + this.userData[0].wins);
             return result = ' WON!  ';
         }
+    }
+    
+    playMusic(src) {
+        let song = document.querySelector('audio');
+        song.src = src;
+        song.play();
     }
 }
 
