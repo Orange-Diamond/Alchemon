@@ -61,26 +61,22 @@ let buildingData = [
         id: 'gym',
         src: 'images/map-gym.png',
         bgSrc: 'images/gym-interior.png',
+        mp3: 'audio/alchemon-battle.mp3',
         buttons: this.trainerData
     },
     {
         id: 'lab',
         src: 'images/map-lab.png',
         bgSrc: 'images/lab-interior.jpg',
+        mp3: 'audio/alchemon-lab.mp3',
         buttons: this.docBookData
     },
     {
         id: 'home',
         src: 'images/map-home.png',
         bgSrc: 'images/lab-interior.jpg',
+        mp3: 'audio/alchemon-map.mp3',
         buttons: this.homeData
     },
     
 ];
-
-// this.loseData = [{
-//     id: 'lose',
-//     src: '',
-//     bgSrc: 'images/loser.jpg',
-//     buttons: this.loseData
-// }];
