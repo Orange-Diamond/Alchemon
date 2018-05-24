@@ -4,15 +4,15 @@
 let pokeballData = [
     {
         id: 'pokeball',
-        src: 'images/pokeball-Demo.png'
+        src: 'images/alcheball.png'
     },
     {
         id: 'pokeball',
-        src: 'images/pokeball-Demo.png'
+        src: 'images/alcheball.png'
     },
     {
         id: 'pokeball',
-        src: 'images/pokeball-Demo.png'
+        src: 'images/alcheball.png'
     }
 ];
 this.docBookData = [
@@ -76,4 +76,12 @@ let buildingData = [
         buttons: this.homeData
 
     },
+    
 ];
+
+// this.loseData = [{
+//     id: 'lose',
+//     src: '',
+//     bgSrc: 'images/loser.jpg',
+//     buttons: this.loseData
+// }];
