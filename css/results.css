@@ -1,14 +1,11 @@
-body {
-    background-color: grey;
-}
 
 table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20pt;
-    background-color: #00AA8F;
-    opacity: .80;
+    background-color: #39499B;
+    /* opacity: .80; */
     color: black;
     font-size: 20px;
     width: 40%;
