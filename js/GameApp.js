@@ -1,6 +1,15 @@
 /* exported  mapRefresh randomize  GameApp */
 /* globals  docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay*/
 'use strict';
+let leaderBoard;
+const storedData = window.localStorage.getItem('scoreBoard');
+const scoreboard = JSON.parse(storedData);
+if(scoreboard){
+    leaderBoard = scoreboard;
+}
+else {
+    leaderBoard = [];
+}
 
 const gameAppTemplate = document.getElementById('game-app-template');
 
@@ -27,7 +36,8 @@ class GameApp {
                 dialogue.textContent = 'You battled ' + buttonClicked.id + '! and you ' + battleResult;
                 if(this.lives === 0){
                     this.user = [this.playerName, this.playerPokemon, this.wins];
-                    window.localStorage.setItem('user', JSON.stringify(this.user));
+                    leaderBoard.push(this.user);
+                    window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
