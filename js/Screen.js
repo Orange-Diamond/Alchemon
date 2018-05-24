@@ -7,7 +7,6 @@ class ScreenDisplay {
     constructor(buildingList, onClick){
         this.buildingList = buildingList;
         this.onClick = onClick;
-
     }
     update(buttonList) {
         this.buttonList = buttonList;
@@ -19,7 +18,6 @@ class ScreenDisplay {
             this.imageComponent = new Button(this.buttonList[i], this.onClick);
             this.buttonArea.appendChild(this.imageComponent.render());
         }
-        
     }
     
     render() {
@@ -28,5 +26,4 @@ class ScreenDisplay {
         this.update(this.buildingList);
         return dom;
     }
-
 }

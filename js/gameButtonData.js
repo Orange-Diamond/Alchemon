@@ -1,4 +1,4 @@
-/*exported docBookData, buildingData, trainerData */
+/*exported docBookData, buildingData, trainerData, pokeballData */
 'use strict';
 
 let pokeballData = [
@@ -19,15 +19,18 @@ let pokeballData = [
 this.docBookData = [
     {
         id: 'html-doc',
-        src: 'images/computer.gif'
+        src: 'images/computer.gif',
+        link: ' https://developer.mozilla.org/en-US/docs/Learn/HTML'
     },
     {
         id: 'css-doc',
-        src: 'images/computer.gif'
+        src: 'images/computer.gif',
+        link: 'https://css-tricks.com/'
     },
     {
         id: 'js-doc',
-        src: 'images/computer.gif'
+        src: 'images/computer.gif',
+        link: 'http://eloquentjavascript.net/'
     },
 ];
 
@@ -59,21 +62,18 @@ let buildingData = [
         src: 'images/map-gym.png',
         bgSrc: 'images/gym-interior.png',
         buttons: this.trainerData
-        
     },
     {
         id: 'lab',
         src: 'images/map-lab.png',
         bgSrc: 'images/lab-interior.jpg',
         buttons: this.docBookData
-
     },
     {
         id: 'home',
         src: 'images/map-home.png',
         bgSrc: 'images/lab-interior.jpg',
         buttons: this.homeData
-
     },
     
 ];

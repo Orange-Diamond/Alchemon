@@ -11,22 +11,19 @@
 </head>
 <body>
     <div id="game-play-area">
-    
-        <div id="root">
-
-        </div>
-
+      
+        <div id="root"></div>
     </div> 
-    
+    <button onclick="mapRefresh()" id="map-refresh">Back To Map</button>
+
     <div id="game-nav-bar">
-            <ul>
-                <li><a href="index.html">HOME PAGE</a></li>
-                <li><a href="results.html">RESULTS PAGE</a></li>
-            </ul>
-        </div>   
+        <ul>
+            <li><a href="index.html">HOME PAGE</a></li>
+            <li><a href="results.html">RESULTS PAGE</a></li>
+        </ul>
+    </div>   
 
     <!-- // game app template -->
-
     <template id="game-app-template">
             <p>game app</p>
         <div id="screen-area">
@@ -52,12 +49,10 @@
     <template id="button-template">
         <span>
             <span><img></span>
-        
         </span>
     </template>
 
-
-
+    <script src="js/userData.js"></script>
     <script src="js/Locations.js"></script>
     <script src="js/gameButtonData.js"></script>
     <script src="js/Button.js"></script>
