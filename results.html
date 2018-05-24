@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/results.css">
-</head>
-<body>
-    <!-- music is on autoplay - un-comment when ready to deploy -->
-    <!-- <audio id="final-theme-music" autoplay>
-        <source src="" type="audio/mpeg">
-        Your browser does not support the audio element. 
-    </audio> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/results.css">
+    </head>
+    <body>
+        <a href="index.html">New Game</a>
+        <div id="results-table-body-template">
+            <table>
+                <thead>
+                    <td>Player Name</td>
+                    <td>Alchemon Creature</td>
+                    <td>Win Before Death</td>
+                </thead>
+                <tbody id="player">
 
-    <!-- Component Sections -->
-    <!-- <div id="root"></div> -->
-    <a href="index.html">index.html link</a>
-    <button id="clear-data">Clear Data</button>
+                </tbody>
+            </table>
+        </div>
+        <h1>About Us</h1>
+        <container>
+            <div class="team">
+                Mariah Adams
+            </div>
 
-    <!-- Table Body Component -->
-    <div id="results-table-body-template">
-        <table>
-            <thead>
-                <td>Player Name</td>
-                <td>Alchemon Creature</td>
-                <td>Win Before Death</td>
-            </thead>
-            <tbody id="player">
-
-            </tbody>
-        </table>
-  </div>
-    <!-- About Me Content to be added -->
-<h1>About Us</h1>
-
-<container>
-    <!-- Trainer: Mariah Adams -->
-    <div class="team">
-        Mariah Adams
-    </div>
-    <!-- Trainer: Carrie Carter -->
-    <div class="team">
-        Carrie Carter
-    </div>
-    <!-- Trainer: Chris Golden -->
-    <div class="team">
-        Chris Golden
-    </div>
-    <!-- Trainer: Antreo Pukay -->
-    <script src="js/GameApp.js"></script>
-    <script src="js/Results.js"></script>
-</body>
+            <div class="team">
+                Carrie Carter
+            </div>
+            <div class="team">
+                Chris Golden
+            </div>
+            <div class="team">
+                Antreo Pukay
+            </div>
+        </container>
+        <script src="js/GameApp.js"></script>
+        <script src="js/Results.js"></script>
+    </body>
 </html>

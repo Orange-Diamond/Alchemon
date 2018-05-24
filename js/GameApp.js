@@ -1,5 +1,5 @@
-/* exported  randomize  GameApp */
-/* globals userData sound mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+/* exported mapRefresh randomize  GameApp */
+/* globals docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay */
 
 'use strict';
 let leaderBoard;
@@ -40,7 +40,6 @@ class GameApp {
                     this.user = [this.playerName, this.playerPokemon, this.wins];
                     leaderBoard.push(this.user);
                     window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
-
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
@@ -72,13 +71,13 @@ class GameApp {
         const randomPlayerScore = randomNum;
         this.result = result;
         if(randomPlayerScore < 6) {
-            this.userData[0].lives--;
-            console.log('lives left = ' + this.userData[0].lives);
+            this.lives--;
+            console.log('lives left = ' + this.lives);
             
             return result = ' LOST!  ';
         } else {
-            this.userData[0].wins++;
-            console.log('win #' + this.userData[0].wins);
+            this.wins++;
+            console.log('win #' + this.wins);
             return result = ' WON!  ';
         }
     }
@@ -93,9 +92,4 @@ class GameApp {
 
 function mapRefresh(){
     location.reload();
-    // const dom = gameAppTemplate.content.cloneNode(true);
-    // const screenArea = dom.getElementById('screen-area');
-    // console.log(screenArea.backgroundImage);
-    // screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
-    // console.log('clicked');
 }
