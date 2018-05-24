@@ -39,7 +39,6 @@ margin: 20px
     justify-content: center;
     position: fixed;
     min-height: 720px;
-    background-image: url("/images/gameboy.png");
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-position: center top;
@@ -48,7 +47,6 @@ margin: 20px
 } */
 #root {
     display: flex;
-    background-image: url('/images/gameboy.png');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 85%;

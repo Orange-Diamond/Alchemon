@@ -1,5 +1,5 @@
 /* exported mapRefresh randomize  GameApp */
-/* globals docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay */
+/* globals docBookData ScreenDisplay homeData trainerData buildingData  */
 
 'use strict';
 let leaderBoard;
@@ -58,9 +58,7 @@ class GameApp {
             }
         });
 
-        const dialogueArea = dom.getElementById('dialog-area');
-        const dialogueComponent = new DialogueDisplay;
-        dialogueArea.appendChild(dialogueComponent.render());
+
         this.screenArea.appendChild(screenComponent.render());
 
         return dom;
