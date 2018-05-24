@@ -11,7 +11,7 @@ class GameApp {
     }
     
     render() {
-        const dom = gameAppTemplate.content.cloneNode(true);
+        const dom = gameAppTemplate.content.clmoved oneNode(true);
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
             let dialogue = document.getElementById('dialogue');
