@@ -1,28 +1,70 @@
-
+body {
+    background-color: grey;
+}
 
 table {
     border-collapse: collapse;
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20pt;
+    background-color: #00AA8F;
     opacity: .80;
     color: black;
     font-size: 20px;
+    width: 40%;
+    
+    
 }
 
-th, td, tr {
+th, {
     border: solid;
     color: black;
     padding: 5px;
-
+    
+    
 }
 
 tr {
     border: solid;
     color: black;
     padding: 5px;
+    text-align: center;
+    
+}
+thead {
+    font-family: 'Press Start 2P', cursive; 
+    font-weight: bolder;
 }
 
 td {
     border: solid;
     color: black;
     padding: 5px;
+    
+}
+
+h1 { 
+    font-size: 22pt;
+    font-weight: bolder;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 40pt;
+    
+}
+
+container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div {
+    margin: auto;
+}
+.team {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18pt;
+    border: 5px;
+    color: black;
 }
