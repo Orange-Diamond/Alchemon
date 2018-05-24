@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/results.css">
 </head>
 <body>
+    <!-- music is on autoplay - un-comment when ready to deploy -->
+    <!-- <audio id="final-theme-music" autoplay>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element. 
+    </audio> -->
+
     <!-- Component Sections -->
     <!-- <div id="root"></div> -->
     <a href="index.html">index.html link</a>
@@ -16,12 +22,13 @@
     <!-- Table Body Component -->
     <div id="results-table-body-template">
         <table>
+            <thead>
+                <td>Player Name</td>
+                <td>Alchemon Creature</td>
+                <td>Win Before Death</td>
+            </thead>
             <tbody id="player">
-                <thead>
-                    <td>Player Name</td>
-                    <td>Alchemon Creature</td>
-                    <td>Wins Before Death</td>
-                </thead>
+
             </tbody>
         </table>
   </div>
@@ -42,11 +49,7 @@
         Chris Golden
     </div>
     <!-- Trainer: Antreo Pukay -->
-    <div class="team">
-        Antreo Pukay
-    </div>
-</container>
-    <script src="js/userData.js"></script>
+    <script src="js/GameApp.js"></script>
     <script src="js/Results.js"></script>
 </body>
 </html>
