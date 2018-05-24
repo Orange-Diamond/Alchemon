@@ -1,6 +1,6 @@
 
-/*exported ScreenDisplay */
-/* globals Button */
+/*exported ScreenDisplay GameApp */
+/* globals Button GameApp userData */
 'use strict';
 const screenAreaTemplate = document.getElementById('screen-area-template');
 class ScreenDisplay {
@@ -9,6 +9,7 @@ class ScreenDisplay {
         this.onClick = onClick;
     }
     update(buttonList) {
+        const heartTemplate = document.getElementById('heart-template');
         this.buttonList = buttonList;
         this.screenBackground = document.getElementById('screen-area');
         while(this.buttonArea.lastElementChild){
@@ -18,6 +19,15 @@ class ScreenDisplay {
             this.imageComponent = new Button(this.buttonList[i], this.onClick);
             this.buttonArea.appendChild(this.imageComponent.render());
         }
+        //render user lives left
+        for(let i = 0; i < userData.lives; i++) {
+            heartTemplate.cloneNode(true);
+            const healthArea = document.getElementById('lives-left');
+            healthArea.appendChild(heartTemplate);
+            
+        }
+
+
     }
     
     render() {

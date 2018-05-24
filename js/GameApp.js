@@ -55,7 +55,7 @@ class GameApp {
         if(randomPlayerScore < 6) {
             this.userData[0].lives--;
             console.log('lives left = ' + this.userData[0].lives);
-            
+
             return result = ' LOST!  ';
         } else {
             this.userData[0].wins++;
