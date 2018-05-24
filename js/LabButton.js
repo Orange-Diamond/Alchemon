@@ -1,5 +1,5 @@
 /* exported LabButton */
-'use strict';
+/* 'use strict';
 
 const labButtonTemplate = document.getElementById('lab-button-template');
 
@@ -19,4 +19,4 @@ class LabButton {
         
         return dom;
     }
-}
+} */

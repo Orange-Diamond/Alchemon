@@ -1,22 +1,20 @@
 /* exported introAppTemplate, IntroApp */
-/* globals pokeballData, LabScreenDisplay, LabDialogueDisplay */
+/* globals LabScreenDisplay, LabDialogueDisplay */
 'use strict';
 
 const introAppTemplate = document.getElementById('intro-app-template');
 
 class IntroApp {
     constructor() {
-        this.buttonList = pokeballData;
     }
 
     render() {
         const dom = introAppTemplate.content.cloneNode(true);
 
-        const labScreenArea = dom.getElementById('lab-screen-area');
-        const labScreenComponent = new LabScreenDisplay(this.buttonList, (buttonClicked) => {
-            console.log(buttonClicked);
-        });
-        labScreenArea.appendChild(labScreenComponent.render());
+        this.labScreenArea = dom.getElementById('lab-screen-area');
+        const labScreenComponent = new LabScreenDisplay();
+        // this.labScreenArea.style.backgroundImage = 'url(\'images/lab-interior.jpg\')';
+        this.labScreenArea.appendChild(labScreenComponent.render());
 
         const labDialogueArea = dom.getElementById('lab-dialogue-area');
         const labDialogueComponent = new LabDialogueDisplay();
