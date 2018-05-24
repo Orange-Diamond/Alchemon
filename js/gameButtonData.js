@@ -1,6 +1,21 @@
 /*exported docBookData, buildingData, trainerData */
 'use strict';
 
+let pokeballData = [
+    {
+        id: 'pokeball',
+        src: 'images/alcheball.png'
+    },
+    {
+        id: 'pokeball',
+        src: 'images/alcheball.png'
+    },
+    {
+        id: 'pokeball',
+        src: 'images/alcheball.png'
+    }
+];
+
 this.docBookData = [
     {
         id: 'html-doc',
@@ -60,4 +75,12 @@ let buildingData = [
         buttons: this.homeData
 
     },
+    
 ];
+
+// this.loseData = [{
+//     id: 'lose',
+//     src: '',
+//     bgSrc: 'images/loser.jpg',
+//     buttons: this.loseData
+// }];
