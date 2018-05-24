@@ -1,5 +1,5 @@
 /* exported labScreenAreaTemplate, LabScreenDisplay */
-/* globals LabButton */
+/* globals  */
 'use strict';
 
 const labScreenAreaTemplate = document.getElementById('lab-screen-area-template');
@@ -13,14 +13,14 @@ class LabScreenDisplay {
     render() {
         const dom = labScreenAreaTemplate.content.cloneNode(true);
         this.buttonArea = dom.getElementById('lab-button-area');
-        console.log('buttonArea', this.buttonArea);
         
-        for(let i in this.buttonList){
+        return dom;
+    }
+}
+
+
+/* for(let i in this.buttonList){
             this.imageComponent = new LabButton(this.buttonList[i], this.onClick);
             this.buttonArea.appendChild(this.imageComponent.render());
             console.log('button list', this.buttonList[i]);
-        }
-        return dom;
-    }
-
-}
+        } */
