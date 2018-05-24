@@ -12,7 +12,7 @@ table {
     color: black;
     font-size: 20px;
     width: 40%;
-    
+    box-shadow: 10px 10px 25px;
     
 }
 
@@ -20,8 +20,6 @@ th, {
     border: solid;
     color: black;
     padding: 5px;
-    
-    
 }
 
 tr {
@@ -29,18 +27,20 @@ tr {
     color: black;
     padding: 5px;
     text-align: center;
-    
+    border-width: 5px;
 }
+
 thead {
     font-family: 'Press Start 2P', cursive; 
     font-weight: bolder;
+    
 }
 
 td {
     border: solid;
     color: black;
     padding: 5px;
-    
+    border-width: 3px;
 }
 
 h1 { 
@@ -56,11 +56,12 @@ container {
     display: flex;
     align-items: center;
     justify-content: center;
-
+border-radius: 40px;
 }
 
 div {
     margin: auto;
+    
 }
 .team {
     font-family: 'Press Start 2P', cursive;
