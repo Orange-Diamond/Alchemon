@@ -23,12 +23,10 @@ img{
     background-repeat: no-repeat;
     height: 602px;
     width: 900px;
-    display: flex; 
+    display: flex;  
     justify-content: center; 
     align-items: center;
-    border-radius: 8px;
-
-    
+    border-radius: 8px;    
 }
 span {
 margin: 20px
@@ -76,8 +74,8 @@ margin: 20px
     z-index: 11;
 }
 
-#dialogue-box {
-    
+#Lewis {
+    padding-top: 200px;
 }
 
 #game-nav-bar {
@@ -92,3 +90,5 @@ margin: 20px
     color: #39499B;
 
 }
+
+
