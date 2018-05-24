@@ -1,7 +1,8 @@
-/* globals rowResults */
+/* globals rowResults, userData, clearUserData */
 /* exported rowResults */
 
-const resultsColumn = ['playerName', 'alchemonCreature', 'wins'];
+// const resultsColumn = ['playerName', 'alchemonCreature', 'wins'];
+const resultsColumn = [userData[0].playerName, userData[0].alchemon, userData[0].wins];
 
 
 function playerResults() {
@@ -15,7 +16,13 @@ function playerResults() {
         const tData = document.createElement('td');
         tData.textContent = resultsColumn[i];
         tRow.appendChild(tData);
-
     }
 }
 playerResults();
+
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    clearUserData();
+    window.location.reload();
+});

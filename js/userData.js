@@ -18,17 +18,27 @@ else {
 function initUserData() {
     userData = [
         {
-            name: '',
-            lives: 0,
+            playerName: 'Ash',
+            alchemon: 'Pikachu',
+            lives: 3,
             wins: 0
         }
     ];
 }
 
+// let userData = [
+//     {
+//         playerName: '',
+//         alchemon: 'Pikachu',
+//         lives: 3,
+//         wins: 0
+//     }
+// ];
+
 console.log(userData);
 
 /* For resetting user data: */
-// function clearUserData() {
-//     window.localStorage.clear('userData');
-//     initUserData();
-// }
+function clearUserData() {
+    window.localStorage.clear('userData');
+    initUserData();
+}

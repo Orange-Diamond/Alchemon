@@ -1,5 +1,5 @@
 /* exported  randomize  GameApp */
-/* globals mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay*/
+/* globals userData mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -7,9 +7,7 @@ const gameAppTemplate = document.getElementById('game-app-template');
 class GameApp {
     constructor() {
         this.buttonList = buildingData;
-        this.lives = 3;
-        this.wins = 0;
-        this.playerName = '';
+        this.userData = userData;
     }
     
     render() {
@@ -24,7 +22,7 @@ class GameApp {
      
                 console.log('Clicked trainer');
                 dialogue.textContent = 'You battled ' + buttonClicked.id + '! and you ' + battleResult;
-                if(this.lives === 0){
+                if(this.userData[0].lives === 0){
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
@@ -51,18 +49,17 @@ class GameApp {
     }
 
     randomize(result) {
-
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
         this.result = result;
         if(randomPlayerScore < 6) {
-            this.lives--;
-            console.log('loss' + this.lives);
+            this.userData[0].lives--;
+            console.log('lives left = ' + this.userData[0].lives);
             
             return result = ' LOST!  ';
         } else {
-            this.wins++;
-            console.log('win' + this.wins);
+            this.userData[0].wins++;
+            console.log('win #' + this.userData[0].wins);
             return result = ' WON!  ';
         }
     }
