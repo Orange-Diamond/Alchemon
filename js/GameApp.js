@@ -1,5 +1,5 @@
-/* exported  randomize  GameApp */
-/* globals userData mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+/* exported  randomize  GameApp mapRefresh*/
+/* globals userData mapRefresh gameApp docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
 'use strict';
 
 const gameAppTemplate = document.getElementById('game-app-template');
@@ -51,10 +51,20 @@ class GameApp {
     randomize(result) {
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
+        const heartTemplate = document.getElementById('heart-template');
         this.result = result;
         if(randomPlayerScore < 6) {
             this.userData[0].lives--;
             console.log('lives left = ' + this.userData[0].lives);
+            //render user lives left
+            for(let i = 0; i < userData.lives; i++) {
+                let heartImage = heartTemplate.cloneNode(true);
+                const healthArea = document.getElementById('lives-left');
+                healthArea.appendChild(heartImage);
+            
+            }
+
+
 
             return result = ' LOST!  ';
         } else {
