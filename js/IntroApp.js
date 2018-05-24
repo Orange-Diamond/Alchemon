@@ -15,7 +15,6 @@ class IntroApp {
         const labScreenComponent = new LabScreenDisplay();
         // this.labScreenArea.style.backgroundImage = 'url(\'images/lab-interior.jpg\')';
         this.labScreenArea.appendChild(labScreenComponent.render());
-
         const labDialogueArea = dom.getElementById('lab-dialogue-area');
         const labDialogueComponent = new LabDialogueDisplay();
         labDialogueArea.appendChild(labDialogueComponent.render());
