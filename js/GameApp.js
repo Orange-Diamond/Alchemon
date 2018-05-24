@@ -1,5 +1,6 @@
-/* exported  mapRefresh randomize  GameApp */
-/* globals  docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay*/
+/* exported  randomize  GameApp */
+/* globals userData mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+
 'use strict';
 let leaderBoard;
 const storedData = window.localStorage.getItem('scoreBoard');
@@ -20,6 +21,7 @@ class GameApp {
         this.wins = 0;
         this.playerPokemon = 'Javasaurus';
         this.playerName = 'Chris';
+
     }
     
     render() {
@@ -38,6 +40,7 @@ class GameApp {
                     this.user = [this.playerName, this.playerPokemon, this.wins];
                     leaderBoard.push(this.user);
                     window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
+
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
@@ -64,18 +67,17 @@ class GameApp {
     }
 
     randomize(result) {
-
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
         this.result = result;
         if(randomPlayerScore < 6) {
-            this.lives--;
-            console.log('loss' + this.lives);
+            this.userData[0].lives--;
+            console.log('lives left = ' + this.userData[0].lives);
             
             return result = ' LOST!  ';
         } else {
-            this.wins++;
-            console.log('win' + this.wins);
+            this.userData[0].wins++;
+            console.log('win #' + this.userData[0].wins);
             return result = ' WON!  ';
         }
     }
