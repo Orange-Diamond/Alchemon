@@ -1,28 +1,21 @@
-/* globals rowResults, userData, clearUserData */
+/* globals leaderBoard rowResults */
 /* exported rowResults */
 
-// const resultsColumn = ['playerName', 'alchemonCreature', 'wins'];
-const resultsColumn = [userData[0].playerName, userData[0].alchemon, userData[0].wins];
-
-
 function playerResults() {
-    
-    const table = document.getElementById('player');
-    
-    let tRow = document.createElement('tr');
-    table.appendChild(tRow);
-    for(let i in resultsColumn) {
-        tRow = document.querySelector('tr');
-        const tData = document.createElement('td');
-        tData.textContent = resultsColumn[i];
-        tRow.appendChild(tData);
+    const table = document.querySelector('tbody');
+    for(let i in leaderBoard) {
+        let tRow = document.createElement('tr');
+        table.appendChild(tRow);
+        console.log(' i is: ', leaderBoard[i]);
+        for(let j in leaderBoard[i]){
+            const tData = document.createElement('td');
+            let innerBoard = leaderBoard[i];
+            tData.textContent = innerBoard[j];
+            console.log(tData);
+            tRow.appendChild(tData);
+        }
     }
 }
+
 playerResults();
 
-
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-    clearUserData();
-    window.location.reload();
-});
