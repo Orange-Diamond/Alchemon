@@ -22,11 +22,13 @@ img{
     background-image: url('/images/main-map-bg.jpg');
     background-repeat: no-repeat;
     height: 602px;
-    width: 900px;
+    width: 880px;
     display: flex;  
     justify-content: center; 
     align-items: center;
-    border-radius: 8px;    
+    margin-top: 20px;
+    /* border-radius: 30px 30px; */
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.329);    
 }
 span {
 margin: 20px
@@ -48,15 +50,15 @@ margin: 20px
 } */
 #root {
     display: flex;
-    background-image: url('/images/gameboy.png');
+    background-image: url('/images/gameboy.png'); 
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 85%;
+    /* background-size: 85%; */
     height: 800px;
     align-items: center;
-    justify-content: center
-    
+    justify-content: center;   
 }
+
 #button-area{
     width: 600px;
 }
@@ -67,7 +69,8 @@ margin: 20px
 }
 
 #screen-area {
-    z-index: 8;
+    box-shadow: 5px, 10px, black;
+    
 }
 
 #dialog-area {
