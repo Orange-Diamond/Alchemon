@@ -1,5 +1,5 @@
-/* exported  randomize  GameApp */
-/* globals userData sound mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+/* exported mapRefresh randomize  GameApp */
+/* globals docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay */
 
 'use strict';
 let leaderBoard;
