@@ -1,8 +1,10 @@
-/* exported  randomize  GameApp */
-/* globals userData sound mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+/* exported mapRefresh randomize  GameApp */
+/* globals docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay */
 
 'use strict';
 let leaderBoard;
+let userName = window.localStorage.getItem('player');
+let alchemon = window.localStorage.getItem('alchemon');
 const storedData = window.localStorage.getItem('scoreBoard');
 const scoreboard = JSON.parse(storedData);
 if(scoreboard){
@@ -19,28 +21,39 @@ class GameApp {
         this.buttonList = buildingData;
         this.lives = 3;
         this.wins = 0;
-        this.playerPokemon = 'Javasaurus';
-        this.playerName = 'Chris';
+        if(alchemon){
+            this.playerPokemon = JSON.parse(alchemon);
+        }
+        else {
+            alchemon = 'none';
+        }
+        if(userName){
+            this.playerName = JSON.parse(userName);
+        }
+        else {
+            userName = 'none';
+        }
 
     }
     
     render() {
         const dom = gameAppTemplate.content.cloneNode(true);
         this.screenArea = dom.getElementById('screen-area');
-        const screenComponent = new ScreenDisplay(this.buttonList, (buttonClicked) => {
+        const screenComponent = new ScreenDisplay(this.buttonList, this.lives, (buttonClicked) => {
             let dialogue = document.getElementById('dialogue');
             console.log(buttonClicked);
 
             if(trainerData.includes(buttonClicked)){
                 const battleResult = this.randomize(this.result);
-     
                 console.log('Clicked trainer');
                 dialogue.textContent = 'You battled ' + buttonClicked.id + '! and you ' + battleResult;
+
                 if(this.lives === 0){
                     this.user = [this.playerName, this.playerPokemon, this.wins];
                     leaderBoard.push(this.user);
                     window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
-
+                    dialogue.textContent = 'GAME OVER!';
+                    document.getElementById('map-refresh').style.visibility = 'hidden';
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
@@ -55,10 +68,11 @@ class GameApp {
             else {
                 this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
                 screenComponent.update(buttonClicked.buttons);
+                dialogue.textContent = buttonClicked.text;
                 this.playMusic(buttonClicked.mp3);
             }
         });
-
+        
         const dialogueArea = dom.getElementById('dialog-area');
         const dialogueComponent = new DialogueDisplay;
         dialogueArea.appendChild(dialogueComponent.render());
@@ -66,7 +80,7 @@ class GameApp {
 
         return dom;
     }
-
+    
     randomize(result) {
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
@@ -93,9 +107,5 @@ class GameApp {
 
 function mapRefresh(){
     location.reload();
-    // const dom = gameAppTemplate.content.cloneNode(true);
-    // const screenArea = dom.getElementById('screen-area');
-    // console.log(screenArea.backgroundImage);
-    // screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
-    // console.log('clicked');
+
 }

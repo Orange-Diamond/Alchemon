@@ -1,9 +1,9 @@
-/* globals IntroApp */
-/* exported  */
-'use strict';
+// /* globals IntroApp */
+// /* exported  */
+// 'use strict';
 
-const introApp = new IntroApp;
-const dom = introApp.render();
-const root = document.getElementById('root');
+// const introApp = new IntroApp;
+// const dom = introApp.render();
+// const root = document.getElementById('root');
 
-root.appendChild(dom);
+// root.appendChild(dom);

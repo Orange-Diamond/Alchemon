@@ -1,32 +1,55 @@
-/* #screen {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-} */
 
-/* Pixel Font to use for game score display etc... 
-/* font-family: 'Press Start 2P', cursive; */
-/* We will need a new grid set for the actual game screen dimensions of 892x602 */ 
 img{
     height: 175px;
 }
-/* We will need a new grid set for the actual game screen dimensions of 892x602 */
-/* * {
-    border-style: solid;
-    border-width: 1px;
-    border-color: red;
-} */
+#heart-area {
+    display: flex;
+    justify-content: flex-end; 
+    margin-right: 170px;
+    margin-bottom: -30px;
+}
+.heart {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+}
+
 #screen-area {
     background-image: url('/images/main-map-bg.jpg');
     background-repeat: no-repeat;
     height: 602px;
-    width: 900px;
+    width: 880px;
     display: flex;  
     justify-content: center; 
     align-items: center;
-    border-radius: 8px;    
+    margin-top: 5px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px black;    
+}
+#map-refresh {
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgba(22, 175, 111, 0.959);
+    border-width: 0px;
+    box-shadow: 5px 3px black;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(0, 0, 0);
+    width: 80px;
+    margin-bottom: 20px;
+}
+a {
+    text-align: center;
+    padding: 15px;
+    height: 30px;
+    width: 130px;
+    background-color: rgb(255, 242, 53);
+    color: black;
+    box-shadow: 5px 3px black;
+    border-radius: 40px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-decoration: none;
+    margin: 10px;
 }
 span {
 margin: 20px
@@ -34,28 +57,27 @@ margin: 20px
 #screen-area:hover{
      cursor:url('/images/cursor-back.png'), auto;
 }
-/* #game-play-area {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    min-height: 720px;
-    background-image: url("/images/gameboy.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: center top;
-    z-index: 10; 
-    align-items: center;
-} */
+#dialogue{
+    background-color: black;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: #EFEB3E;
+    width: 500px;
+    font-size: 30px;
+    height: 120px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 5px;
+}
 #root {
     display: flex;
-    background-image: url('/images/gameboy.png');
+    flex-flow: column;
+    background-image: url('/images/gameboy.png'); 
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 85%;
-    height: 800px;
-    align-items: center;
-    justify-content: center
-    
+    align-items: center; 
+    margin-bottom: 10px;
+
 }
 #button-area{
     width: 600px;
@@ -66,21 +88,8 @@ margin: 20px
     width: 892px;
 }
 
-#screen-area {
-    z-index: 8;
-}
-
-#dialog-area {
-    z-index: 11;
-}
-
 #Lewis {
     padding-top: 200px;
-}
-
-#game-nav-bar {
-    min-height: 30px;
-    background: #EFEB3E;
 }
 
 #game-nav-bar li {
