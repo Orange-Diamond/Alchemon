@@ -16,7 +16,7 @@ submitButton.addEventListener('click', event => {
     }
     window.localStorage.setItem('player', JSON.stringify(userName));
     window.localStorage.setItem('alchemon', JSON.stringify(alchemon));
-    window.location.href = '/game.html';
+    window.location.href = 'game.html';
 
 });
 
