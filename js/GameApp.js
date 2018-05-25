@@ -35,7 +35,6 @@ class GameApp {
 
             if(trainerData.includes(buttonClicked)){
                 const battleResult = this.randomize(this.result);
-     
                 console.log('Clicked trainer');
                 dialogue.textContent = 'You battled ' + buttonClicked.id + '! and you ' + battleResult;
                 if(this.lives === 0){
@@ -58,6 +57,7 @@ class GameApp {
             else {
                 this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
                 screenComponent.update(buttonClicked.buttons);
+                dialogue.textContent = buttonClicked.text;
                 this.playMusic(buttonClicked.mp3);
             }
         });
