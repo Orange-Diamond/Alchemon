@@ -80,30 +80,24 @@ div {
     border: 2px solid black;  
     color: black;
     margin: 20px;
-    box-shadow: 10px 10px 25px;
+    box-shadow: 10px 10px 35px 2px;
     border-radius: 35px;
     background-color: #EFEB3E; 
     
     
 }
-#clear-data {
-    padding: 10px;
-    margin-top: 5pt;
-    margin-left: 14pt;
-    width: 100px;
-    background-color: #FF7546;
-    font-weight: bold
 
-}
 form {
-    padding: 5px;
+    padding: 10px;
     margin-top: 10pt;
     margin-left: 15pt;
-    width: 90px;
-    text-align: center;
+    width: 98px;
+    text-align: auto;
     background-color: #FF7546;
-    border-color: white;
+    border-color: black;
     border-width: 2px;
+    box-shadow: 2px 2px 40px 5px #39499B;
+    border-radius: 60px;
     
 
 
@@ -111,6 +105,19 @@ form {
 input {
     background-color: #FF7546;
     font-weight: bold;
+    font-size: 10pt;
+    
     border-color: #FF7546
     
 }
+#new-game-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8pt;
+    text-align: center;
+    animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
