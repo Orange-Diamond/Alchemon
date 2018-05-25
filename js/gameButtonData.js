@@ -62,6 +62,7 @@ let buildingData = [
         src: 'images/map-gym.png',
         bgSrc: 'images/gym-interior.png',
         mp3: 'audio/alchemon-battle.mp3',
+        text: 'Pick Your Battle!',
         buttons: this.trainerData
     },
     {
@@ -69,6 +70,7 @@ let buildingData = [
         src: 'images/map-lab.png',
         bgSrc: 'images/lab-interior.jpg',
         mp3: 'audio/alchemon-lab.mp3',
+        text: 'Learn Some Code!',
         buttons: this.docBookData
     },
     {
@@ -76,6 +78,7 @@ let buildingData = [
         src: 'images/map-home.png',
         bgSrc: 'images/lewis-room.gif',
         mp3: 'audio/alchemon-map.mp3',
+        text: 'Pet Lewis!',
         buttons: this.homeData
     },
     

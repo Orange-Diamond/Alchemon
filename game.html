@@ -12,32 +12,25 @@
 </head>
 <body>
     <div id="game-play-area">
-      
-        <div id="root">
-            
-        </div>
+            <div id="heart-area"></div>
+        <div id="root"></div>
     </div> 
-    <button onclick="mapRefresh()" id="map-refresh">Back To Map</button>
-
-    <div id="game-nav-bar">
-        <ul>
-            <li><a href="index.html">HOME PAGE</a></li>
-            <li><a href="results.html">RESULTS PAGE</a></li>
-        </ul>
-    </div>   
 
     <!-- // game app template -->
     <template id="game-app-template">
-        
-        <div id="screen-area">
-        </div>
+        <div id="screen-area"></div>
         <audio id="map-music" autoplay>
             <source src="audio/alchemon-map.mp3" type="audio/mpeg">
-            Your browser does not support the audio element. 
-        </audio>
-        <!-- dialog area -->
-        <div id="dialog-area"></div>
-    </template>
+                Your browser does not support the audio element. 
+            </audio>
+            <!-- dialog area -->
+            <div id="dialog-area"></div>
+            <button onclick="mapRefresh()" id="map-refresh"> Map</button>
+            <section id="links">
+            </section>
+        </template>
+        <a href="results.html">RESULTS </a>
+        <a href="index.html">HOME PAGE</a>
 
     <!-- screen area template -->
     <template id="screen-area-template">
@@ -47,9 +40,7 @@
 
     <!-- screen dialog template -->
     <template id="dialog-area-template">
-        <div id="dialogue-box">
-            <p id="dialogue"></p>
-        </div>
+            <p id="dialogue">Choose your Destination</p>
     </template> 
 
     <!-- individual button template -->
@@ -58,7 +49,10 @@
             <span><img></span>
         </span>
     </template>
-    <script src="form.js"></script>
+    <template id="heart-template">
+        <img src="images/heart.gif" class="heart">
+    </template>
+
     <script src="js/userData.js"></script>
     <script src="js/Locations.js"></script>
     <script src="js/gameButtonData.js"></script>
