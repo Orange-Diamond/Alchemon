@@ -1,8 +1,10 @@
-/* exported  randomize  GameApp */
-/* globals userData sound mapRefresh docBookData ScreenDisplay mapRefresh homeData trainerData buildingData DialogueDisplay */
+/* exported mapRefresh randomize  GameApp */
+/* globals docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay */
 
 'use strict';
 let leaderBoard;
+const userName = window.localStorage.getItem('player');
+const alchemon = window.localStorage.getItem('alchemon');
 const storedData = window.localStorage.getItem('scoreBoard');
 const scoreboard = JSON.parse(storedData);
 if(scoreboard){
@@ -19,8 +21,8 @@ class GameApp {
         this.buttonList = buildingData;
         this.lives = 3;
         this.wins = 0;
-        this.playerPokemon = 'Javasaurus';
-        this.playerName = 'Chris';
+        this.playerPokemon = JSON.parse(alchemon);
+        this.playerName = JSON.parse(userName);
 
     }
     
@@ -40,7 +42,6 @@ class GameApp {
                     this.user = [this.playerName, this.playerPokemon, this.wins];
                     leaderBoard.push(this.user);
                     window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
-
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
