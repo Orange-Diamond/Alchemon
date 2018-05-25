@@ -19,17 +19,17 @@ let pokeballData = [
 this.docBookData = [
     {
         id: 'html-doc',
-        src: 'images/computer.gif',
+        src: 'images/lab-gb-html.gif',
         link: ' https://developer.mozilla.org/en-US/docs/Learn/HTML'
     },
     {
         id: 'css-doc',
-        src: 'images/computer.gif',
+        src: 'images/lab-gb-css.gif',
         link: 'https://css-tricks.com/'
     },
     {
         id: 'js-doc',
-        src: 'images/computer.gif',
+        src: 'images/lab-gb-js.gif',
         link: 'http://eloquentjavascript.net/'
     },
 ];
@@ -61,26 +61,22 @@ let buildingData = [
         id: 'gym',
         src: 'images/map-gym.png',
         bgSrc: 'images/gym-interior.png',
+        mp3: 'audio/alchemon-battle.mp3',
         buttons: this.trainerData
     },
     {
         id: 'lab',
         src: 'images/map-lab.png',
         bgSrc: 'images/lab-interior.jpg',
+        mp3: 'audio/alchemon-lab.mp3',
         buttons: this.docBookData
     },
     {
         id: 'home',
         src: 'images/map-home.png',
-        bgSrc: 'images/lab-interior.jpg',
+        bgSrc: 'images/lewis-room.gif',
+        mp3: 'audio/alchemon-map.mp3',
         buttons: this.homeData
     },
     
 ];
-
-// this.loseData = [{
-//     id: 'lose',
-//     src: '',
-//     bgSrc: 'images/loser.jpg',
-//     buttons: this.loseData
-// }];

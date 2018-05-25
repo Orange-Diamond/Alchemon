@@ -12,6 +12,8 @@ class Button {
         const dom = buttonTemplate.content.cloneNode(true);
         const buttonComponent = dom.querySelector('img');
         buttonComponent.src = this.button.src;
+        buttonComponent.id = this.button.id;
+
         buttonComponent.addEventListener('click', () => {
             this.onClick(this.button);
         });

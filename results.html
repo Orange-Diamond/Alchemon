@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/results.css">
 </head>
 <body background="images/pixel-alcheball.png">
+
     <!-- Component Sections -->
     <!-- <div id="root"></div> -->
     <button id="clear-data">Clear Data</button>
@@ -21,12 +22,13 @@
     <!-- Table Body Component -->
     <div id="results-table-body-template">
         <table>
+            <thead>
+                <td>Player Name</td>
+                <td>Alchemon Creature</td>
+                <td>Win Before Death</td>
+            </thead>
             <tbody id="player">
-                <thead>
-                    <td>Player Name</td>
-                    <td>Alchemon Creature</td>
-                    <td>Wins Before Death</td>
-                </thead>
+
             </tbody>
         </table>
   </div>
@@ -56,6 +58,7 @@
     </div>
 </container>
     <script src="js/userData.js"></script>
+    <script src="js/GameApp.js"></script>
     <script src="js/Results.js"></script>
 </body>
 </html>
