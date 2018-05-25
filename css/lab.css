@@ -1,3 +1,5 @@
+
+
 label > input {
     visibility: hidden;
     position: absolute;
@@ -21,5 +23,37 @@ label > input:checked + img {
     justify-content: center; 
     align-items: center;
     border-radius: 8px;
+}
+/* Mariah Styles above this line, Carrie styles below */
+body {
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #EFEB3E;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFF;
+    max-width:450px;
+    line-height: 1.5em;
+}
+
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #EFEB3E;
+    max-width: 450px;
+}
+
+#intro-text {
+    float: right;
+    padding-top: 10%;
+    margin-right: 20%;
+}
+
+#intro-bg {
+    float: left;
 }
 

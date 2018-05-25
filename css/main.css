@@ -1,10 +1,7 @@
 body {
-  background-color: grey;
+  background-color: #71787D;
 }
 
-#game-nav-bar img {
-
-}
 
 /* Pulse */
 @-webkit-keyframes hvr-pulse {
