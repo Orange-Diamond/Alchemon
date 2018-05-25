@@ -84,6 +84,8 @@ class GameApp {
         this.result = result;
         if(randomPlayerScore < 6) {
             this.lives--;
+            let heartLoss = document.getElementById('heart-' + this.lives);
+            heartLoss.style.display = 'none';
             return result = ' LOST!  ';
         } else {
             this.wins++;

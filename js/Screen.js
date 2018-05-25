@@ -27,7 +27,10 @@ class ScreenDisplay {
         }
         for(let i = 0; i < this.lives; i++){
             this.heart = this.heartTemplate.content.cloneNode(true);
+            let img = this.heart.querySelector('img');
+            img.id = 'heart-' + i;
             this.heartArea.appendChild(this.heart);
+            console.log(img);
         }
     }
     
