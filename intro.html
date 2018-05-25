@@ -12,10 +12,10 @@
 </head>
 <body>
     <!-- music is on autoplay - un-comment when ready to deploy -->
-    <!-- <audio id="lab-music" autoplay>
+    <audio id="lab-music" autoplay>
         <source src="audio/alchemon-lab.mp3" type="audio/mpeg">
         Your browser does not support the audio element. 
-    </audio> -->
+    </audio>
 
     <div id="intro-bg">
         <img src="images/intro-lab-marty.jpg">
@@ -44,7 +44,7 @@
                     <label class="alchemon-selector">JSazar</label>    
                     <input type="radio" name="alchemonJS" value="JSazar" id="js">
                 </div>    
-                <br /><input type="submit" onclick="newUser();">
+                <br /><input type="submit" id="submit">
             </form>
 
             <a href="game.html">Enter Game</a>
@@ -59,7 +59,7 @@
             <li><a href="results.html">RESULTS PAGE</a></li>
         </ul>
     </div> 
-    
+
      <script src="js/introApp.js"></script>
     <script src="js/GameApp.js"></script>           
 </body>

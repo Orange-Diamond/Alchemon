@@ -1,18 +1,18 @@
-/*exported LabDialogueDisplay */
-'use strict';
+// /*exported LabDialogueDisplay */
+// 'use strict';
 
-const labDialogueDisplayTemplate = document.getElementById('lab-dialogue-area-template');
+// const labDialogueDisplayTemplate = document.getElementById('lab-dialogue-area-template');
 
-class LabDialogueDisplay {
+// class LabDialogueDisplay {
     
-    render() {
-        const dom = labDialogueDisplayTemplate.content;
+//     render() {
+//         const dom = labDialogueDisplayTemplate.content;
 
-        function playerName() {
-            document.getElementById().submit();
-        }
+//         function playerName() {
+//             document.getElementById().submit();
+//         }
 
-        return dom;
-    }
+//         return dom;
+//     }
 
-}
+// }
