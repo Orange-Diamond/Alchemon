@@ -1,21 +1,3 @@
-#text-and-input {
-    display: flex; 
-    padding-top: 10%; 
-    justify-content: space-around;
-}
-
-#trainer-form, #intro-text {
-    border-style: double;
-    border-width: 15px;
-    border-radius: 25px;
-    border-color: white;
-    padding: 2%;
-}
-
-#trainer-form {
-    margin-left: 1%;
-}
-
 h1, h2 {
     font-family: 'Press Start 2P', cursive;
     color: #EFEB3E;
@@ -42,6 +24,10 @@ h3 {
     font-family: 'Press Start 2P', cursive;
     color: #EFEB3E;
     max-width: 450px;
+}
+
+img {
+    max-width: 100%;
 }
 
 .character-selector input {
@@ -71,6 +57,24 @@ label > input:checked + img {
     height:80px;
 }
 
+#text-and-input {
+    display: flex; 
+    padding-top: 10%; 
+    justify-content: space-around;
+}
+
+#trainer-form, #intro-text {
+    border-style: double;
+    border-width: 15px;
+    border-radius: 25px;
+    border-color: white;
+    padding: 2%;
+}
+
+#trainer-form {
+    margin-left: 1%;
+}
+
 #intro-bg {
     float: left;
 }
@@ -79,3 +83,11 @@ label > input:checked + img {
     color: white;
 }
 
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
