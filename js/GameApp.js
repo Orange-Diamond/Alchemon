@@ -72,13 +72,13 @@ class GameApp {
         const randomPlayerScore = randomNum;
         this.result = result;
         if(randomPlayerScore < 6) {
-            this.userData[0].lives--;
-            console.log('lives left = ' + this.userData[0].lives);
+            this.lives--;
+            console.log('lives left = ' + this.lives);
             
             return result = ' LOST!  ';
         } else {
-            this.userData[0].wins++;
-            console.log('win #' + this.userData[0].wins);
+            this.wins++;
+            console.log('win #' + this.wins);
             return result = ' WON!  ';
         }
     }
