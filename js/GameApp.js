@@ -42,6 +42,8 @@ class GameApp {
                     this.user = [this.playerName, this.playerPokemon, this.wins];
                     leaderBoard.push(this.user);
                     window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
+                    dialogue.textContent = 'GAME OVER!';
+                    document.getElementById('map-refresh').style.visibility = 'hidden';
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
