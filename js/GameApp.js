@@ -96,9 +96,5 @@ class GameApp {
 
 function mapRefresh(){
     location.reload();
-    // const dom = gameAppTemplate.content.cloneNode(true);
-    // const screenArea = dom.getElementById('screen-area');
-    // console.log(screenArea.backgroundImage);
-    // screenArea.style.backgroundImage = 'url(\'images/map-area-bg.jpg\')';
-    // console.log('clicked');
+
 }
