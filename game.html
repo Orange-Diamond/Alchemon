@@ -14,7 +14,6 @@
     <div id="game-play-area">
         <div id="root"></div>
     </div> 
-    <button onclick="mapRefresh()" id="map-refresh">Back To Map</button>
     <div id="game-nav-bar">
         <ul>
             <li><a href="index.html">HOME PAGE</a></li>
@@ -32,6 +31,7 @@
             Your browser does not support the audio element. 
         </audio>
         <!-- dialog area -->
+        <button onclick="mapRefresh()" id="map-refresh"> Map</button>
         <div id="dialog-area"></div>
     </template>
 
@@ -43,9 +43,8 @@
 
     <!-- screen dialog template -->
     <template id="dialog-area-template">
-        <div id="dialogue-box">
             <p id="dialogue"></p>
-        </div>
+
     </template> 
 
     <!-- individual button template -->
