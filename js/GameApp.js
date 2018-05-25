@@ -4,7 +4,7 @@
 'use strict';
 let leaderBoard;
 const userName = window.localStorage.getItem('player');
-
+const alchemon = window.localStorage.getItem('alchemon');
 const storedData = window.localStorage.getItem('scoreBoard');
 const scoreboard = JSON.parse(storedData);
 if(scoreboard){
@@ -21,7 +21,7 @@ class GameApp {
         this.buttonList = buildingData;
         this.lives = 3;
         this.wins = 0;
-        this.playerPokemon = 'Javasaurus';
+        this.playerPokemon = JSON.parse(alchemon);
         this.playerName = JSON.parse(userName);
 
     }

@@ -1,6 +1,5 @@
 /* exported newUser */
 function newUser(){
-
     let userName = document.getElementById('userName').value;
     let alchemon;
     if(document.getElementById('html').checked){
