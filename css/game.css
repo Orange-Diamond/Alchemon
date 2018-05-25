@@ -1,4 +1,6 @@
-
+body {
+    background-color: rgb(132, 130, 139);
+}
 img{
     height: 175px;
 }
@@ -13,9 +15,9 @@ img{
     width: 30px;
     background-color: black;
 }
-
+https://orange-diamond.github.io/Alchemon/images/
 #screen-area {
-    background-image: url('/images/main-map-bg.jpg');
+    background-image: url('https://orange-diamond.github.io/Alchemon/images/main-map-bg.jpg');
     background-repeat: no-repeat;
     height: 602px;
     width: 880px;
@@ -55,7 +57,7 @@ span {
 margin: 20px
 }
 #screen-area:hover{
-     cursor:url('/images/cursor-back.png'), auto;
+     cursor:url('https://orange-diamond.github.io/Alchemon/images/cursor-back.png'), auto;
 }
 #dialogue{
     background-color: black;
@@ -72,7 +74,7 @@ margin: 20px
 #root {
     display: flex;
     flex-flow: column;
-    background-image: url('/images/gameboy.png'); 
+    background-image: url('https://orange-diamond.github.io/Alchemon/images/gameboy.png'); 
     background-position: 50%;
     background-repeat: no-repeat;
     align-items: center; 
