@@ -11,30 +11,33 @@
     <title>Alchemon Game Play</title>
 </head>
 <body>
-    <div id="game-play-area">
-      
+    <div id="game-play-area">  
         <div id="root">
-            
+
         </div>
     </div> 
-    <button onclick="mapRefresh()" id="map-refresh">Back To Map</button>
 
-    <div id="game-nav-bar">
-        <ul>
-            <li><a href="index.html">HOME PAGE</a></li>
-            <li><a href="results.html">RESULTS PAGE</a></li>
-        </ul>
-    </div>   
+    <button onclick="mapRefresh()" id="map-refresh">Back To Map</button>
+    
+    <div class="footer">       
+            <a href="index.html">HOME</a>
+            <a href="game.html">MAP</a>
+            <a href="results.html">LEADERBOARD</a>    
+    </div> 
+
 
     <!-- // game app template -->
     <template id="game-app-template">
         
         <div id="screen-area">
+
         </div>
+
         <audio id="map-music" autoplay>
             <source src="audio/alchemon-map.mp3" type="audio/mpeg">
             Your browser does not support the audio element. 
         </audio>
+
         <!-- dialog area -->
         <div id="dialog-area"></div>
     </template>
@@ -42,7 +45,9 @@
     <!-- screen area template -->
     <template id="screen-area-template">
         
-        <div id="button-area"></div>
+        <div id="button-area">
+
+        </div>
     </template>
 
     <!-- screen dialog template -->
@@ -58,7 +63,7 @@
             <span><img></span>
         </span>
     </template>
-    <script src="form.js"></script>
+  
     <script src="js/userData.js"></script>
     <script src="js/Locations.js"></script>
     <script src="js/gameButtonData.js"></script>

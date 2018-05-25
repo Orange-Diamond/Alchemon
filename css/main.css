@@ -60,9 +60,6 @@ body {
     justify-content: center;
     margin-top: 150px;
   }
-  #main-title {
-    
-  }
   
   #game-nav-bar {
     margin-top: 40px;
@@ -86,3 +83,33 @@ body {
   #play-main {
     font-family: 'Press Start 2P', cursive;
   } 
+
+
+/* SITE FOOTER */
+
+.footer {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #39499B;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.footer a:hover {
+  color: #FF7546;
+}
+
+.footer a:active {
+  color: #ff7546;
+}

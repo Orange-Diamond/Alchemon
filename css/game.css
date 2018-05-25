@@ -1,23 +1,9 @@
-/* #screen {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-} */
 
-/* Pixel Font to use for game score display etc... 
-/* font-family: 'Press Start 2P', cursive; */
-/* We will need a new grid set for the actual game screen dimensions of 892x602 */ 
+
 img{
     height: 175px;
 }
-/* We will need a new grid set for the actual game screen dimensions of 892x602 */
-/* * {
-    border-style: solid;
-    border-width: 1px;
-    border-color: red;
-} */
+
 #screen-area {
     background-image: url('/images/main-map-bg.jpg');
     background-repeat: no-repeat;
@@ -27,7 +13,6 @@ img{
     justify-content: center; 
     align-items: center;
     margin-top: 20px;
-    /* border-radius: 30px 30px; */
     box-shadow: 0 0 28px rgba(0, 0, 0, 0.329);    
 }
 span {
@@ -36,18 +21,7 @@ margin: 20px
 #screen-area:hover{
      cursor:url('/images/cursor-back.png'), auto;
 }
-/* #game-play-area {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    min-height: 720px;
-    background-image: url("/images/gameboy.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: center top;
-    z-index: 10; 
-    align-items: center;
-} */
+
 #root {
     display: flex;
     background-image: url('/images/gameboy.png'); 
@@ -81,17 +55,33 @@ margin: 20px
     padding-top: 200px;
 }
 
-#game-nav-bar {
-    min-height: 30px;
-    background: #EFEB3E;
+
+/* SITE FOOTER */
+
+.footer {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #39499B;
 }
 
-#game-nav-bar li {
-    text-decoration: none;
-    display: inline-block; 
+.footer a {
+    float: left;
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
-    color: #39499B;
-
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
+.footer a:hover {
+    color: #FF7546;
+}
+
+.footer a:active {
+    color: #ff7546;
+}
 

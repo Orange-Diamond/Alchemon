@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <link rel="stylesheet" href="css/lab.css">
+    <link rel="stylesheet" href="css/intro.css">
     <!-- <link rel="stylesheet" href="css/game.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Alchemon Lab Intro</title>
@@ -20,33 +20,40 @@
     <div id="intro-bg">
         <img src="images/intro-lab-marty.jpg">
     </div>
+
     <div id= "intro-text">
         <h1>WELCOME!</h1>
         <p>Andrew, Michele, and Zach have been training hard in the gym. They are ready to battle!</p>        
-        <p>Come by the lab to see me anytime to brush up on your Alchemon knowledge.</p>
+        <p>Come by the lab to see me, Professor Marty, anytime to brush up on your Alchemon knowledge.</p>
         <p>If you need a break, Lewis is waiting at home, but don't show up empty handed!</p> 
         <h3>Now, tell me your name and pick your Alchemon!</h3>                    
     </div>
-    
-
-    <div id="game-nav-bar">
-        <ul>
-            <li><a href="index.html">HOME PAGE</a></li>
-            <li><a href="game.html">GAME PAGE</a></li> <!-- placeholder to test functionality -->
-            <li><a href="results.html">RESULTS PAGE</a></li>
-        </ul>
-    </div> 
-    <form id="entry-form">
-            <h2>Hey there Trainer. What's your name?</h2>
+    <div id="form-container">
+        <form id="entry-form">
+            <h2>Hello Trainer! What's your name?</h2>
             <input type="text" id="userName">
-            <h2>Pick Your Alchemon!</h2>
-            <input type="radio" name="alchemon" value="CSSasaur" id="css">css
-            <input type="radio" name="alchemon" value="HTMLachu" id="html">html
-            <input type="radio" name="alchemon" value="JSazar" id="js">javascript
+            <div class="character-selector">
+                <h2>Pick Your Alchemon!</h2>
+                <label class="alchemon-selector">CSSasaur</label>
+                <input type="radio" name="alchemonCSS" value="CSSasaur" id="css">
+                <label class="alchemon-selector">HTMLachu</label>
+                <input type="radio" name="alchemonHTML" value="HTMLachu" id="html">
+                <label class="alchemon-selector">JSazar</label>    
+                <input type="radio" name="alchemonJS" value="JSazar" id="js">
+            </div>    
             <input type="submit" onclick="newUser();">
         </form>
+    </div>    
     
      <a href="game.html">Into Game</a>
+
+     <div class="footer">
+           
+                <a href="index.html">HOME</a>
+                <a href="game.html">MAP</a>
+                <a href="results.html">LEADERBOARD</a>
+            
+        </div>
      <script src="js/introApp.js"></script>
     <script src="js/GameApp.js"></script>           
 </body>
