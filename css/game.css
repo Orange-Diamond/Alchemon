@@ -18,7 +18,7 @@ img{
     justify-content: center; 
     align-items: center;
     margin-top: 20px;
-    /* border-radius: 30px 30px; */
+    border-radius: 15px;
     box-shadow: 2px 2px 5px black;    
 }
 #map-refresh {
@@ -30,7 +30,20 @@ img{
     font-family: 'Press Start 2P', cursive;
     color: rgb(0, 0, 0);
     width: 80px;
-
+    margin-bottom: 20px;
+}
+a {
+    text-align: center;
+    padding: 15px;
+    height: 30px;
+    width: 130px;
+    background-color: rgb(255, 242, 53);
+    color: black;
+    border-radius: 40px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-decoration: none;
+    margin: 10px;
 }
 span {
 margin: 20px
@@ -48,7 +61,7 @@ margin: 20px
     height: 100px;
     text-align: center;
     padding-top: 20px;
-    margin: 0px;
+    margin: 5px;
 }
 #root {
     display: flex;
@@ -57,9 +70,9 @@ margin: 20px
     background-position: 50%;
     background-repeat: no-repeat;
     align-items: center; 
+    margin-bottom: 10px;
 
 }
-
 #button-area{
     width: 600px;
 }
@@ -71,11 +84,6 @@ margin: 20px
 
 #Lewis {
     padding-top: 200px;
-}
-
-#game-nav-bar {
-    min-height: 30px;
-    background: #EFEB3E;
 }
 
 #game-nav-bar li {
