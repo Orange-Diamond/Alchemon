@@ -5,15 +5,16 @@
 const screenAreaTemplate = document.getElementById('screen-area-template');
 
 class ScreenDisplay {
-    constructor(buildingList, onClick){
+    constructor(buildingList, lives, onClick){
         this.buildingList = buildingList;
         this.onClick = onClick;
-        this.lives = 3;
+        this.lives = lives;
     }
     update(buttonList) {
         this.buttonList = buttonList;
         this.screenBackground = document.getElementById('screen-area');
         this.heartTemplate = document.getElementById('heart-template');
+        this.heartArea = document.getElementById('heart-area');
         while(this.buttonArea.lastElementChild){
             this.buttonArea.lastElementChild.remove();
         }
@@ -21,9 +22,11 @@ class ScreenDisplay {
             this.imageComponent = new Button(this.buttonList[i], this.onClick);
             this.buttonArea.appendChild(this.imageComponent.render());
         }
-        for(let i = 0; i < 3; i++){
+        while(this.heartArea.lastElementChild){
+            this.heartArea.lastElementChild.remove();
+        }
+        for(let i = 0; i < this.lives; i++){
             this.heart = this.heartTemplate.content.cloneNode(true);
-            this.heartArea = document.getElementById('heart-area');
             this.heartArea.appendChild(this.heart);
         }
     }
