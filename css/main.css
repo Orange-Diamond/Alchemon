@@ -3,7 +3,6 @@ body {
 }
 
 
-/* Pulse */
 @-webkit-keyframes hvr-pulse {
     25% {
       -webkit-transform: scale(1.1);
@@ -59,9 +58,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 150px;
-  }
-  #main-title {
-    
   }
   
   #game-nav-bar {

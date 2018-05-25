@@ -41,11 +41,9 @@ class GameApp {
         this.screenArea = dom.getElementById('screen-area');
         const screenComponent = new ScreenDisplay(this.buttonList, this.lives, (buttonClicked) => {
             let dialogue = document.getElementById('dialogue');
-            console.log(buttonClicked);
 
             if(trainerData.includes(buttonClicked)){
                 const battleResult = this.randomize(this.result);
-                console.log('Clicked trainer');
                 dialogue.textContent = 'You battled ' + buttonClicked.id + '! and you ' + battleResult;
 
                 if(this.lives === 0){
@@ -63,7 +61,6 @@ class GameApp {
             }
             else if(docBookData.includes(buttonClicked)){
                 window.open(buttonClicked.link);
-                console.log('clicked ' + buttonClicked.id);
             }
             else {
                 this.screenArea.style.backgroundImage = 'url(\'' + buttonClicked.bgSrc + '\')';
@@ -87,12 +84,9 @@ class GameApp {
         this.result = result;
         if(randomPlayerScore < 6) {
             this.lives--;
-            console.log('lives left = ' + this.lives);
-            
             return result = ' LOST!  ';
         } else {
             this.wins++;
-            console.log('win #' + this.wins);
             return result = ' WON!  ';
         }
     }
@@ -103,7 +97,6 @@ class GameApp {
         song.play();
     }
 }
-
 
 function mapRefresh(){
     location.reload();
