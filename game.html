@@ -12,9 +12,8 @@
 </head>
 <body>
     <div id="game-play-area">
-        <div id="heart-area"></div>
+            <div id="heart-area"></div>
         <div id="root"></div>
-        
     </div> 
 
     <!-- // game app template -->
@@ -28,10 +27,10 @@
             <div id="dialog-area"></div>
             <button onclick="mapRefresh()" id="map-refresh"> Map</button>
             <section id="links">
-            <a href="results.html">RESULTS </a>
-            <a href="index.html">HOME PAGE</a>
             </section>
-    </template>
+        </template>
+        <a href="results.html">RESULTS </a>
+        <a href="index.html">HOME PAGE</a>
 
     <!-- screen area template -->
     <template id="screen-area-template">
@@ -51,9 +50,9 @@
         </span>
     </template>
     <template id="heart-template">
-        <img src="images/heart.gif">
+        <img src="images/heart.gif" class="heart">
     </template>
-    <script src="js/lives.js"></script>
+
     <script src="js/userData.js"></script>
     <script src="js/Locations.js"></script>
     <script src="js/gameButtonData.js"></script>
