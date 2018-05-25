@@ -5,15 +5,19 @@ img{
     height: 175px;
 }
 #heart-area {
-    display: flex;
-    justify-content: flex-end; 
-    margin-right: 170px;
-    margin-bottom: -30px;
+    display: block;
+    top: 20px;
+    position: absolute;
+    left: 300px;
+
+
 }
 .heart {
     height: 30px;
     width: 30px;
+    border-radius: 30px;
     background-color: black;
+
 }
 
 #screen-area {
