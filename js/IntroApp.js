@@ -18,6 +18,5 @@ submitButton.addEventListener('click', event => {
     window.localStorage.setItem('alchemon', JSON.stringify(alchemon));
     window.location.href = 'https://orange-diamond.github.io/Alchemon/game.html';
 
-
 });
 
