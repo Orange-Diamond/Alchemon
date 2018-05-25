@@ -35,9 +35,19 @@
             <li><a href="game.html">GAME PAGE</a></li> <!-- placeholder to test functionality -->
             <li><a href="results.html">RESULTS PAGE</a></li>
         </ul>
-    </div>   
-
-
-          
+    </div> 
+    <form id="entry-form">
+            <h2>Hey there Trainer. What's your name?</h2>
+            <input type="text" id="userName">
+            <h2>Pick Your Alchemon!</h2>
+            <input type="radio" name="alchemon" value="CSSasaur" id="css">css
+            <input type="radio" name="alchemon" value="HTMLachu" id="html">html
+            <input type="radio" name="alchemon" value="JSazar" id="js">javascript
+            <input type="submit" onclick="newUser();">
+        </form>
+    
+     <a href="game.html">Into Game</a>
+     <script src="js/introApp.js"></script>
+    <script src="js/GameApp.js"></script>           
 </body>
 </html>
