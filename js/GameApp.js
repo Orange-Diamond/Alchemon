@@ -3,6 +3,8 @@
 
 'use strict';
 let leaderBoard;
+const userName = window.localStorage.getItem('player');
+
 const storedData = window.localStorage.getItem('scoreBoard');
 const scoreboard = JSON.parse(storedData);
 if(scoreboard){
@@ -20,7 +22,7 @@ class GameApp {
         this.lives = 3;
         this.wins = 0;
         this.playerPokemon = 'Javasaurus';
-        this.playerName = 'Chris';
+        this.playerName = JSON.parse(userName);
 
     }
     
@@ -40,7 +42,6 @@ class GameApp {
                     this.user = [this.playerName, this.playerPokemon, this.wins];
                     leaderBoard.push(this.user);
                     window.localStorage.setItem('scoreBoard', JSON.stringify(leaderBoard));
-
                     this.screenArea.style.backgroundImage = 'url(\'' + 'images/loser.jpg' + '\')';
                     screenComponent.update(buttonClicked.buttons);
                 }
