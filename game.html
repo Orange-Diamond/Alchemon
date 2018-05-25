@@ -12,13 +12,13 @@
 </head>
 <body>
     <div id="game-play-area">
+        <div id="heart-area"></div>
         <div id="root"></div>
         
     </div> 
 
     <!-- // game app template -->
     <template id="game-app-template">
-        
         <div id="screen-area"></div>
         <audio id="map-music" autoplay>
             <source src="audio/alchemon-map.mp3" type="audio/mpeg">
@@ -50,7 +50,10 @@
             <span><img></span>
         </span>
     </template>
-    <script src="form.js"></script>
+    <template id="heart-template">
+        <img src="images/heart.gif">
+    </template>
+    <script src="js/lives.js"></script>
     <script src="js/userData.js"></script>
     <script src="js/Locations.js"></script>
     <script src="js/gameButtonData.js"></script>

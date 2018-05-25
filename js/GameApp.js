@@ -61,7 +61,7 @@ class GameApp {
                 this.playMusic(buttonClicked.mp3);
             }
         });
-
+        
         const dialogueArea = dom.getElementById('dialog-area');
         const dialogueComponent = new DialogueDisplay;
         dialogueArea.appendChild(dialogueComponent.render());
@@ -69,7 +69,7 @@ class GameApp {
 
         return dom;
     }
-
+    
     randomize(result) {
         var randomNum = Math.floor(((Math.random()) * 20));
         const randomPlayerScore = randomNum;
