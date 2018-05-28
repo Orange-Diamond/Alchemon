@@ -2,6 +2,8 @@
 /* globals docBookData ScreenDisplay homeData trainerData buildingData DialogueDisplay */
 
 'use strict';
+
+// This part should be in own data js file. You don't need the GameApp on each page, just the data
 let leaderBoard;
 let userName = window.localStorage.getItem('player');
 let alchemon = window.localStorage.getItem('alchemon');
@@ -42,6 +44,8 @@ class GameApp {
         const screenComponent = new ScreenDisplay(this.buttonList, this.lives, (buttonClicked) => {
             let dialogue = document.getElementById('dialogue');
 
+            // Would be good to see the results in the source data and this
+            // section of code be more generic
             if(trainerData.includes(buttonClicked)){
                 const battleResult = this.randomize(this.result);
                 dialogue.textContent = 'You battled ' + buttonClicked.id + '! and you ' + battleResult;
@@ -58,8 +62,12 @@ class GameApp {
             }
             else if(homeData.includes(buttonClicked)){
                 dialogue.textContent = 'NO TOUCHING! JUST LOOKING.... UNLESS YOU HAS SNAKS?';
+                // for example this should come from the data:
+                // dialogue.textContent = buttonClicked.result;
+
             }
             else if(docBookData.includes(buttonClicked)){
+                // see how the result is driven from the data, this is how you want it
                 window.open(buttonClicked.link);
             }
             else {

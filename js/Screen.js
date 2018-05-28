@@ -12,6 +12,8 @@ class ScreenDisplay {
     }
     update(buttonList) {
         this.buttonList = buttonList;
+        // These should be a part of the _this_ template and reference
+        // in render() from `dom`. 
         this.screenBackground = document.getElementById('screen-area');
         this.heartTemplate = document.getElementById('heart-template');
         this.heartArea = document.getElementById('heart-area');
