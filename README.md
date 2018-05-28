@@ -5,3 +5,4 @@ When you die, your score will take it's place on the leader board, where you can
 
 **PREPARE FOR BATTLE!!!!!!**
 
+// initial commit
